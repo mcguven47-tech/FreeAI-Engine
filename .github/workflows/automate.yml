@@ -34,4 +34,5 @@ jobs:
           git config --global user.email "agent@nexusai.local"
           git add posts/
           git commit -m "Automated article published by NexusAI Agent 🤖" || echo "No changes to commit"
+          git pull --rebase origin main
           git push
