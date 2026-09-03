@@ -8,18 +8,76 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+      </head>
       <body>
-        <div className="container">
+        <div className="site-wrapper">
           <header className="header">
-            <div className="logo">NexusAI.</div>
-            <nav style={{display: 'flex', gap: '1rem'}}>
-              <a href="/" style={{color: 'var(--text-secondary)'}}>Articles</a>
-              <a href="#" style={{color: 'var(--text-secondary)'}}>About</a>
-            </nav>
+            <div className="header-inner">
+              <a href="/" className="logo-group">
+                <div className="logo-orb">
+                  <span>⚡</span>
+                </div>
+                <div className="logo-text">
+                  Nexus<span className="logo-gradient">AI</span>
+                </div>
+              </a>
+
+              <div className="live-pill">
+                <span className="live-dot"></span>
+                <span>Autonomous • Daily Updates</span>
+              </div>
+
+              <nav className="nav-links">
+                <a href="/" className="nav-link active">Articles</a>
+                <a href="#newsletter" className="nav-link">Newsletter</a>
+                <a href="#newsletter" className="btn-primary">
+                  Get Daily AI Insights
+                </a>
+              </nav>
+            </div>
           </header>
-          <main>{children}</main>
-          <footer style={{textAlign: 'center', marginTop: '4rem', padding: '2rem 0', color: 'var(--text-secondary)', borderTop: '1px solid var(--glass-border)'}}>
-            © {new Date().getFullYear()} NexusAI. Generated autonomously.
+
+          <main className="main-content">{children}</main>
+
+          <footer className="site-footer">
+            <div className="footer-inner">
+              <div className="footer-brand">
+                <div className="logo-group">
+                  <div className="logo-orb"><span>⚡</span></div>
+                  <div className="logo-text">Nexus<span className="logo-gradient">AI</span></div>
+                </div>
+                <p className="footer-desc">
+                  An autonomous publication curating the best AI tools, side hustles, and digital income strategies. Curated and written 100% autonomously by AI.
+                </p>
+              </div>
+
+              <div className="footer-links-group">
+                <div className="footer-col">
+                  <h4>Topics</h4>
+                  <a href="/">AI Side Hustles</a>
+                  <a href="/">Productivity Hacks</a>
+                  <a href="/">Automation Workflows</a>
+                  <a href="/">Prompt Engineering</a>
+                </div>
+                <div className="footer-col">
+                  <h4>Platform</h4>
+                  <a href="/">Archive</a>
+                  <a href="#newsletter">Newsletter</a>
+                  <a href="https://github.com/mcguven47-tech/autoblogger" target="_blank" rel="noreferrer">Open Source GitHub</a>
+                </div>
+              </div>
+            </div>
+
+            <div className="footer-bottom">
+              <p>© {new Date().getFullYear()} NexusAI Media Inc. Autonomously generated content.</p>
+              <div className="footer-badge">
+                <span>🤖 Engine: Gemini 3.6 & Flash</span>
+              </div>
+            </div>
           </footer>
         </div>
       </body>

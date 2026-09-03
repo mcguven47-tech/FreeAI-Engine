@@ -100,13 +100,15 @@ def main():
     
     print("Writing article...")
     prompt = f"""
-    Write a comprehensive, highly engaging, and premium quality blog post about: "{title}".
+    Write a comprehensive, highly engaging, visually rich, and premium quality blog post about: "{title}".
     
     Requirements:
-    - Use Markdown formatting (H1 for title, H2/H3 for sections, bullet points, bold text).
-    - Start with a catchy introduction.
-    - Break the content into readable sections.
-    - Provide actionable advice or real-world examples.
+    - Use clean Markdown formatting (H2/H3 for sections, bullet points, bold text).
+    - Start with a catchy introduction and an inspirational blockquote (> Quote).
+    - Break the content into readable, scannable sections with practical step-by-step guidance.
+    - Include 2-3 relevant illustration images throughout the article using Markdown image syntax:
+      Format: ![Visual Description](https://image.pollinations.ai/prompt/YOUR_ENCODED_IMAGE_PROMPT_HERE?width=1000&height=500&nologo=true)
+    - Provide actionable advice, income benchmarks ($/month), or real-world workflow examples.
     - End with a compelling conclusion.
     - Do NOT include frontmatter (I will add it).
     - Output ONLY the markdown text.
