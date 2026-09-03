@@ -1,43 +1,50 @@
 import os
-import json
-import urllib.request
 import datetime
 import re
+from google import genai
+from google.genai import types
 
-def generate_content(prompt, api_key):
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key={api_key}"
-    
-    headers = {
-        "Content-Type": "application/json"
-    }
-    
-    data = {
-        "contents": [{
-            "parts": [{"text": prompt}]
-        }],
-        "systemInstruction": {
-            "parts": [{"text": "You are an expert tech and productivity blogger. Your goal is to write highly engaging, SEO-optimized, and premium articles in English about AI tools, productivity hacks, and digital side hustles. Output ONLY the raw markdown content without any wrapper code blocks."}]
-        }
-    }
-    
-    req = urllib.request.Request(url, data=json.dumps(data).encode('utf-8'), headers=headers, method='POST')
-    try:
-        with urllib.request.urlopen(req) as response:
-            result = json.loads(response.read().decode('utf-8'))
-            return result['candidates'][0]['content']['parts'][0]['text']
-    except Exception as e:
-        print(f"Error calling Gemini API: {e}")
+def get_client():
+    api_key = os.environ.get("GEMINI_API_KEY")
+    if not api_key:
+        print("GEMINI_API_KEY environment variable not set. Exiting.")
         return None
+    return genai.Client(api_key=api_key.strip())
 
-def generate_topic(api_key):
+def generate_content(prompt, client, is_system_instruct=True):
+    models_to_try = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"]
+    
+    config = None
+    if is_system_instruct:
+        config = types.GenerateContentConfig(
+            system_instruction="You are an expert tech and productivity blogger. Your goal is to write highly engaging, SEO-optimized, and premium articles in English about AI tools, productivity hacks, and digital side hustles. Output ONLY the raw markdown content without any wrapper code blocks."
+        )
+
+    for model_name in models_to_try:
+        try:
+            print(f"Calling Gemini with model: {model_name}...")
+            response = client.models.generate_content(
+                model=model_name,
+                contents=prompt,
+                config=config
+            )
+            if response.text:
+                print(f"Successfully generated content using {model_name}!")
+                return response.text
+        except Exception as e:
+            print(f"Model {model_name} error: {e}")
+            
+    return None
+
+def generate_topic(client):
     prompt = """
     Brainstorm a highly engaging and trendy blog post title about AI tools or side hustles. 
     It should be catchy, click-worthy, and SEO optimized.
     Respond with ONLY the title, nothing else. Example: "5 AI Tools That Will Replace Your Content Team in 2024"
     """
-    title = generate_content(prompt, api_key)
+    title = generate_content(prompt, client, is_system_instruct=False)
     if title:
-        return title.strip().replace('"', '')
+        return title.strip().replace('"', '').replace('\n', '')
     return "The Future of AI and Productivity"
 
 def slugify(text):
@@ -47,13 +54,12 @@ def slugify(text):
     return text
 
 def main():
-    api_key = os.environ.get("GEMINI_API_KEY")
-    if not api_key:
-        print("GEMINI_API_KEY environment variable not set. Exiting.")
+    client = get_client()
+    if not client:
         return
 
     print("Generating topic...")
-    title = generate_topic(api_key)
+    title = generate_topic(client)
     print(f"Topic selected: {title}")
     
     print("Writing article...")
@@ -70,15 +76,14 @@ def main():
     - Output ONLY the markdown text.
     """
     
-    content = generate_content(prompt, api_key)
+    content = generate_content(prompt, client, is_system_instruct=True)
     if not content:
-        print("Failed to generate content.")
+        print("Failed to generate content with all available models.")
         return
         
     date_str = datetime.datetime.now().strftime("%Y-%m-%d")
     slug = slugify(title)
     
-    # Remove H1 if the model included it at the very top (since we render it in the layout)
     content = re.sub(r'^#\s+.*\n+', '', content, count=1)
     
     frontmatter = f"""---
@@ -91,7 +96,6 @@ description: "Discover the latest insights on {title.lower()} and how to leverag
     
     final_content = frontmatter + content
     
-    # Ensure posts directory exists
     posts_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "posts")
     os.makedirs(posts_dir, exist_ok=True)
     
