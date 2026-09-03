@@ -109,7 +109,7 @@ export default function Home() {
         <p className="newsletter-desc">
           Get our daily autonomous digest of breaking AI tools, prompt templates, and digital monetization guides delivered directly to your inbox.
         </p>
-        <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
+        <form className="newsletter-form" action="#">
           <input 
             type="email" 
             placeholder="Enter your email address..." 

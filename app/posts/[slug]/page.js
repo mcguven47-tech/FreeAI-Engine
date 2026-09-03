@@ -45,13 +45,15 @@ export default async function Post({ params }) {
             </div>
 
             <div style={{ display: 'flex', gap: '0.75rem' }}>
-              <button 
-                onClick="navigator.clipboard.writeText(window.location.href); alert('Link copied to clipboard!');" 
+              <a 
+                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(postData.title)}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary" 
-                style={{ fontSize: '0.8rem', padding: '0.45rem 0.9rem', cursor: 'pointer', border: 'none' }}
+                style={{ fontSize: '0.85rem', padding: '0.45rem 1rem' }}
               >
-                🔗 Share Article
-              </button>
+                🐦 Share on X
+              </a>
             </div>
           </div>
         </header>
