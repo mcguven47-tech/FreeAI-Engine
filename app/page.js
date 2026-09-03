@@ -4,6 +4,7 @@ import ToolExplorer from './components/ToolExplorer'
 import PromptStudio from './components/PromptStudio'
 import SavingsCalculator from './components/SavingsCalculator'
 import Marquee from './components/Marquee'
+import VisualShowcase from './components/VisualShowcase'
 
 function getTools() {
   try {
@@ -52,6 +53,9 @@ export default function Home() {
           </a>
         </div>
       </section>
+
+      {/* Tines-Style Giant Interactive Visual Showcase Window */}
+      <VisualShowcase />
 
       {/* Infinite Moving Marquee of Free Models */}
       <Marquee />
