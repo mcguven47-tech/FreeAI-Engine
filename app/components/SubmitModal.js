@@ -64,7 +64,7 @@ export default function SubmitModal() {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="modal-form">
-            {/* Tier Selector: Free Queue vs $29 Featured */}
+            {/* Tier Selector: Free Queue vs $20 Featured */}
             <div className="tier-selector-row">
               <div
                 className={`tier-card ${tier === 'free' ? 'active' : ''}`}
@@ -80,7 +80,7 @@ export default function SubmitModal() {
                 onClick={() => setTier('featured')}
               >
                 <div className="tier-badge-pill pill-sparkle">⭐ Featured Launch</div>
-                <div className="tier-price">$29 <span style={{ fontSize: '0.75rem', fontWeight: 500 }}>one-time</span></div>
+                <div className="tier-price">$20 <span style={{ fontSize: '0.75rem', fontWeight: 500 }}>one-time</span></div>
                 <div className="tier-desc">Reviewed in 24h + 1-week sticky feature on homepage</div>
               </div>
             </div>
@@ -156,7 +156,7 @@ export default function SubmitModal() {
                 Cancel
               </button>
               <button type="submit" className="btn-primary" style={{ padding: '0.75rem 2rem' }}>
-                {tier === 'featured' ? '🚀 Proceed with Featured ($29)' : 'Submit to Free Queue ($0)'}
+                {tier === 'featured' ? '🚀 Proceed with Featured ($20)' : 'Submit to Free Queue ($0)'}
               </button>
             </div>
           </form>
