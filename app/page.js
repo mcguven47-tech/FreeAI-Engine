@@ -2,6 +2,8 @@ import fs from 'fs'
 import path from 'path'
 import ToolExplorer from './components/ToolExplorer'
 import PromptStudio from './components/PromptStudio'
+import SavingsCalculator from './components/SavingsCalculator'
+import Marquee from './components/Marquee'
 
 function getTools() {
   try {
@@ -18,11 +20,19 @@ export default function Home() {
   const tools = getTools()
 
   return (
-    <div>
+    <div className="home-page-root">
+      {/* Background Animated Glowing Ambient Mesh */}
+      <div className="ambient-mesh-wrap" aria-hidden="true">
+        <div className="ambient-glow glow-purple"></div>
+        <div className="ambient-glow glow-cyan"></div>
+        <div className="ambient-glow glow-emerald"></div>
+        <div className="grid-overlay"></div>
+      </div>
+
       {/* Hero Header */}
       <section className="hero-section">
         <div className="hero-tag">
-          <span>🔥</span> Verified for 2026 • 100% Free & Open-Source Index
+          <span className="live-sparkle">✨</span> Verified for 2026 • The Open AI Freedom Engine
         </div>
         <h1 className="hero-title">
           Stop Paying $100s for AI. <br />
@@ -31,6 +41,24 @@ export default function Home() {
         <p className="hero-desc">
           Compare expensive proprietary AI tools against battle-tested free, freemium, and open-source replacements. Keep your money without sacrificing quality.
         </p>
+
+        {/* Action Buttons */}
+        <div className="hero-actions-row">
+          <a href="#calculator" className="btn-primary hero-btn-main">
+            ⚡ Calculate My Savings
+          </a>
+          <a href="#explorer" className="btn-ghost hero-btn-secondary">
+            🔍 Explore 50+ Free Tools
+          </a>
+        </div>
+      </section>
+
+      {/* Infinite Moving Marquee of Free Models */}
+      <Marquee />
+
+      {/* Interactive Tines-Style Savings Calculator & Node Connector */}
+      <section id="calculator" className="calculator-section">
+        <SavingsCalculator />
       </section>
 
       {/* Main Interactive Tool Explorer (Live Search & Category Filter) */}
@@ -39,14 +67,37 @@ export default function Home() {
       {/* Interactive Super-Prompt Studio */}
       <PromptStudio />
 
-      {/* Mission & FAQ Callout */}
-      <section style={{ maxWidth: '800px', margin: '0 auto 4rem auto', textAlign: 'center' }}>
-        <h3 style={{ fontSize: '1.75rem', fontWeight: 800, marginBottom: '0.75rem' }}>
-          Why Did We Build FreeAI Engine?
-        </h3>
-        <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: 1.7 }}>
-          AI shouldn&apos;t be a $200/month luxury subscription stack. The open-source community (Flux, DeepSeek, Ollama, Kokoro) has created world-class models that run for free. FreeAI Engine bridges the gap so creators, developers, and students never overpay again.
+      {/* Tines-Inspired Value Manifesto Bento Grid */}
+      <section className="manifesto-section">
+        <div className="manifesto-badge">💎 The Open Source Advantage</div>
+        <h3 className="manifesto-title">Why the Free Stack is Winning in 2026</h3>
+        <p className="manifesto-desc">
+          Proprietary AI companies charge $20 to $50/month to lock you into closed APIs. The open weights revolution has leveled the playing field.
         </p>
+
+        <div className="manifesto-grid">
+          <div className="manifesto-card">
+            <div className="m-card-icon">⚡</div>
+            <h4>Zero Compute Markup</h4>
+            <p>
+              Tools like Flux.1 and DeepSeek run with open weights. You pay $0 instead of paying a 500% markup on cloud subscription seats.
+            </p>
+          </div>
+          <div className="manifesto-card">
+            <div className="m-card-icon">🔒</div>
+            <h4>Total Offline Privacy</h4>
+            <p>
+              Tools like Fooocus, Buzz (Whisper.cpp), and Continue.dev run locally on your hardware. Your data, voice, and code never leave your machine.
+            </p>
+          </div>
+          <div className="manifesto-card">
+            <div className="m-card-icon">🚀</div>
+            <h4>Uncapped Creativity</h4>
+            <p>
+              No artificial message limits, no strict rate-limiting, and no random account bans. You own your workflow end-to-end.
+            </p>
+          </div>
+        </div>
       </section>
     </div>
   )
