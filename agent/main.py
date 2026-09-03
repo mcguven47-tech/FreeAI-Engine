@@ -1,28 +1,24 @@
 import os
-import datetime
+import json
 import re
-import time
 from google import genai
 from google.genai import types
 
-def get_client():
+def get_gemini_client():
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        print("GEMINI_API_KEY environment variable not set. Exiting.")
+        print("GEMINI_API_KEY environment variable is not set!")
         return None
-    return genai.Client(api_key=api_key.strip())
+    return genai.Client(api_key=api_key)
 
 def get_available_models(client):
     try:
         discovered = []
-        for m in client.models.list():
-            name = m.name.replace("models/", "")
-            # Only pick text/chat generation models
+        for model in client.models.list():
+            name = model.name.replace("models/", "")
             if "gemini" in name and not any(x in name for x in ["embed", "imagen", "robotics", "aqa"]):
                 discovered.append(name)
-        print(f"Discovered active models for your API key: {discovered}")
         
-        # Sort so that flash models and 3.6 models are prioritized
         def sort_key(name):
             score = 0
             if "3.6" in name: score += 20
@@ -36,154 +32,128 @@ def get_available_models(client):
     except Exception as e:
         print(f"Could not fetch model list: {e}")
         
-    return ["gemini-3.6-flash"]
+    return ["gemini-2.0-flash", "gemini-flash-lite-latest"]
 
-def generate_content(prompt, client, candidate_models, is_system_instruct=True):
-    config = None
-    if is_system_instruct:
-        config = types.GenerateContentConfig(
-            system_instruction="You are Marcus Vance, a seasoned Silicon Valley technology strategist and venture researcher. You write authoritative, insider-level, highly engaging, and actionable articles in English about AI tools, productivity systems, and digital side hustles. Never state that you are an AI or bot; write with natural human authority, firsthand experience, and practical executive tone. Output ONLY clean markdown formatting."
-        )
+def generate_content(prompt, client, candidate_models):
+    config = types.GenerateContentConfig(
+        system_instruction="You are a Principal Software Analyst and Open-Source AI Researcher for FreeAI Engine. Your mission is to find expensive proprietary AI tools and discover the best 100% free, freemium, or open-source alternatives. Return ONLY valid JSON format."
+    )
 
     for model_name in candidate_models:
-        print(f"Attempting generation with model: {model_name}...")
-        for attempt in range(1, 3):
-            try:
-                response = client.models.generate_content(
-                    model=model_name,
-                    contents=prompt,
-                    config=config
-                )
-                if response.text:
-                    print(f"SUCCESS! Content generated using {model_name}!")
-                    return response.text
-            except Exception as e:
-                err_str = str(e)
-                print(f"Model {model_name} attempt {attempt} error: {err_str}")
-                if "503" in err_str or "UNAVAILABLE" in err_str or "429" in err_str:
-                    time.sleep(3)
-                else:
-                    # If it's a 404 or other permanent error for this model, skip immediately to next model
-                    break
-            
+        try:
+            print(f"Calling Gemini with model: {model_name}...")
+            response = client.models.generate_content(
+                model=model_name,
+                contents=prompt,
+                config=config
+            )
+            if response and response.text:
+                print(f"Successfully generated response using {model_name}!")
+                return response.text
+        except Exception as e:
+            print(f"Model {model_name} error: {e}")
+            continue
+
     return None
 
-def generate_topic(client, candidate_models):
-    prompt = """
-    Brainstorm a highly engaging and trendy blog post title about AI tools or side hustles. 
-    It should be catchy, click-worthy, and SEO optimized.
-    Respond with ONLY the title, nothing else. Example: "5 AI Tools That Will Replace Your Content Team in 2024"
-    """
-    title = generate_content(prompt, client, candidate_models, is_system_instruct=False)
-    if title:
-        return title.strip().replace('"', '').replace('\n', '')
-    return "The Future of AI and Productivity"
-
-def slugify(text):
-    text = text.lower()
-    text = re.sub(r'[^a-z0-9\s-]', '', text)
-    text = re.sub(r'[\s-]+', '-', text).strip('-')
-    return text
-
 def main():
-    client = get_client()
+    print("=== FreeAI Engine: Autonomous Discovery Agent Started ===")
+    client = get_gemini_client()
     if not client:
+        print("Skipping execution: GEMINI_API_KEY missing.")
         return
 
-    print("Fetching active models from Google...")
     candidate_models = get_available_models(client)
-    print(f"Models to try in order: {candidate_models}")
 
-    print("Generating topic...")
-    title = generate_topic(client, candidate_models)
-    print(f"Topic selected: {title}")
-    
-    print("Writing article...")
+    tools_file = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "tools.json")
+    os.makedirs(os.path.dirname(tools_file), exist_ok=True)
+
+    existing_tools = []
+    if os.path.exists(tools_file):
+        try:
+            with open(tools_file, "r", encoding="utf-8") as f:
+                existing_tools = json.load(f)
+        except Exception as e:
+            print(f"Error loading existing tools: {e}")
+
+    existing_names = [t["name"].lower() for t in existing_tools]
+
     prompt = f"""
-    Write a comprehensive, highly engaging, visually rich, and premium quality blog post about: "{title}".
+    Find 1 expensive, popular proprietary AI tool that is NOT in this list: {existing_names}.
+    Identify its top 3 100% free, freemium, or open-source alternatives.
     
-    Requirements:
-    - Use clean Markdown formatting (H2/H3 for sections, bullet points, bold text).
-    - Start with a catchy introduction and an inspirational blockquote (> Quote).
-    - Break the content into readable, scannable sections with practical step-by-step guidance.
-    - Include 2-3 relevant illustration images throughout the article using Markdown image syntax:
-      Format: ![Visual Description](https://image.pollinations.ai/prompt/YOUR_ENCODED_IMAGE_PROMPT_HERE?width=1000&height=500&nologo=true)
-    - Provide actionable advice, income benchmarks ($/month), or real-world workflow examples.
-    - End with a compelling conclusion.
-    - Do NOT include frontmatter (I will add it).
-    - Output ONLY the markdown text.
+    Output MUST be a single valid JSON object following this exact schema (no markdown fences, just JSON):
+    {{
+      "id": "slug-id",
+      "name": "Expensive Tool Name",
+      "category": "image|chat|code|audio|video|writing|search",
+      "categoryLabel": "Icon & Label (e.g. 🎨 Image & Art)",
+      "priceMonthly": 20,
+      "priceYearly": 240,
+      "description": "Brief description of the expensive tool and why it's pricey.",
+      "slug": "tool-name-free-alternatives",
+      "alternatives": [
+        {{
+          "name": "Alternative Name",
+          "badge": "100% Free / Open Source",
+          "type": "open-source|free|freemium",
+          "description": "Why this is an exceptional replacement.",
+          "url": "https://official-or-github-link",
+          "pros": ["Pro 1", "Pro 2", "Pro 3"],
+          "cons": ["Limitation or setup requirement"]
+        }}
+      ]
+    }}
     """
-    
-    content = generate_content(prompt, client, candidate_models, is_system_instruct=True)
-    if not content:
-        print("Failed to generate content with all available models.")
+
+    print("Discovering and benchmarking new expensive AI tool vs free alternatives...")
+    raw_json = generate_content(prompt, client, candidate_models)
+
+    if not raw_json:
+        print("Failed to generate tool data.")
         return
-        
-    date_str = datetime.datetime.now().strftime("%Y-%m-%d")
-    slug = slugify(title)
-    
-    content = re.sub(r'^#\s+.*\n+', '', content, count=1)
-    
-    import urllib.parse
-    image_prompt = urllib.parse.quote(f"{title} futuristic digital technology 3d glassmorphism aesthetic vibrant cinematic")
-    image_url = f"https://image.pollinations.ai/prompt/{image_prompt}?width=1200&height=630&nologo=true"
-    
-    frontmatter = f"""---
-title: "{title}"
-date: "{date_str}"
-description: "Discover the latest insights on {title.lower()} and how to leverage it for your productivity."
-image: "{image_url}"
----
 
-"""
-    
-    final_content = frontmatter + content
-    
-    posts_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "posts")
-    os.makedirs(posts_dir, exist_ok=True)
-    
-    file_path = os.path.join(posts_dir, f"{slug}.md")
-    
-    with open(file_path, "w", encoding="utf-8") as f:
-        f.write(final_content)
-        
-    print(f"Article successfully generated and saved to: {file_path}")
+    # Clean JSON
+    cleaned_json = re.sub(r'^```json\s*', '', raw_json.strip())
+    cleaned_json = re.sub(r'\s*```$', '', cleaned_json.strip())
 
-    # Generate Viral Reddit Distribution Strategy
-    print("\nGenerating viral Reddit distribution strategy...")
-    article_url = f"https://autoblogger-mu.vercel.app/posts/{slug}"
-    reddit_prompt = f"""
-    Based on the blog post titled "{title}", create an ultra-engaging, high-value Reddit post designed to be posted in subreddits like r/SideHustle, r/ChatGPT, r/Entrepreneur, or r/PassiveIncome.
-    
-    Guidelines for Reddit Virality:
-    - Reddit community HATES blatant self-promotion. The post must deliver 90% of the raw, actionable value right inside the Reddit text so people enthusiastically upvote it.
-    - Title: Catchy, authentic, curiosity-inducing (e.g. "[Breakdown] 7 AI side hustles that actually make money in 2025. Here is the realistic breakdown:").
-    - Body: Breakdown with bullet points, realistic earnings, specific tool names, and practical advice.
-    - Call to Action at the bottom: Subtle, natural citation (e.g. "I wrote a complete step-by-step breakdown with all prompt templates and links on my blog here: {article_url}").
-    - Provide a list of 3-4 recommended subreddits to post in.
-    
-    Output format:
-    # 📌 TARGET SUBREDDITS: ...
-    # 📝 REDDIT POST TITLE: ...
-    ---
-    [Reddit Post Body]
-    """
-    
-    reddit_content = generate_content(reddit_prompt, client, candidate_models, is_system_instruct=False)
-    
-    marketing_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "marketing")
-    os.makedirs(marketing_dir, exist_ok=True)
-    marketing_file = os.path.join(marketing_dir, f"{slug}-reddit.md")
-    
-    with open(marketing_file, "w", encoding="utf-8") as f:
-        f.write(f"# Distribution Package for: {title}\nArticle URL: {article_url}\n\n" + (reddit_content or "Failed to generate Reddit post."))
+    try:
+        new_tool = json.loads(cleaned_json)
         
-    print("\n" + "="*50)
-    print("🔥 READY-TO-POST VIRAL REDDIT PACKAGE CREATED:")
-    print("="*50)
-    if reddit_content:
-        print(reddit_content)
-    print("="*50 + "\n")
+        # Verify schema
+        if "name" in new_tool and "alternatives" in new_tool:
+            # Check if already exists
+            if new_tool["name"].lower() not in existing_names:
+                existing_tools.append(new_tool)
+                with open(tools_file, "w", encoding="utf-8") as f:
+                    json.dump(existing_tools, f, indent=2, ensure_ascii=False)
+                print(f"✅ Successfully added new tool to FreeAI Engine: {new_tool['name']}")
+                print(f"Total tools in directory: {len(existing_tools)}")
+
+                # Generate viral distribution tweet/post
+                marketing_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "marketing")
+                os.makedirs(marketing_dir, exist_ok=True)
+                marketing_file = os.path.join(marketing_dir, f"{new_tool['slug']}-social.md")
+
+                with open(marketing_file, "w", encoding="utf-8") as f:
+                    f.write(f"""# Viral Social Post for: {new_tool['name']}
+Article URL: https://autoblogger-mu.vercel.app/alternatives/{new_tool['slug']}
+
+Stop paying ${new_tool['priceMonthly']}/month (${new_tool['priceYearly']}/yr) for {new_tool['name']}. 🛑
+
+Here are 3 100% free / open-source alternatives you can use right now:
+
+1. {new_tool['alternatives'][0]['name']} ({new_tool['alternatives'][0]['badge']})
+→ {new_tool['alternatives'][0]['description']}
+
+Full feature breakdown & links: https://autoblogger-mu.vercel.app/alternatives/{new_tool['slug']}
+""")
+                print(f"Saved viral distribution post to: {marketing_file}")
+            else:
+                print(f"Tool {new_tool['name']} already exists in catalog.")
+    except Exception as e:
+        print(f"Error parsing JSON from Gemini: {e}")
+        print("Raw response was:", raw_json)
 
 if __name__ == "__main__":
     main()

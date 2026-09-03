@@ -1,0 +1,275 @@
+[
+  {
+    "id": "midjourney",
+    "name": "Midjourney",
+    "category": "image",
+    "categoryLabel": "🎨 Image & Art",
+    "priceMonthly": 30,
+    "priceYearly": 360,
+    "description": "Proprietary AI image generator requiring Discord and a monthly subscription.",
+    "slug": "midjourney-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Flux.1 Schnell",
+        "badge": "Open Source / 100% Free",
+        "type": "open-source",
+        "description": "State-of-the-art 12B parameter open weights image model by Black Forest Labs (ex-Stability AI team). Produces photorealistic results matching Midjourney v6.",
+        "url": "https://huggingface.co/spaces/black-forest-labs/FLUX.1-schnell",
+        "pros": ["Photorealistic skin and hands", "Fast generation speed", "Completely open weights"],
+        "cons": ["Requires good GPU for local run, or free HuggingFace spaces"]
+      },
+      {
+        "name": "Fooocus (SDXL)",
+        "badge": "100% Free / Local",
+        "type": "free",
+        "description": "Offline, free image generator combining Stable Diffusion XL with Midjourney-style prompting and automated quality enhancements.",
+        "url": "https://github.com/lllyasviel/Fooocus",
+        "pros": ["Zero subscription ever", "Offline privacy", "Midjourney-like prompt styling"],
+        "cons": ["Needs an 8GB+ GPU to run locally"]
+      },
+      {
+        "name": "Leonardo.ai",
+        "badge": "Freemium (150 daily tokens)",
+        "type": "freemium",
+        "description": "Browser-based creative studio offering 150 free credits every single day with canvas editing and custom fine-tunes.",
+        "url": "https://leonardo.ai",
+        "pros": ["Web-based, no GPU needed", "Daily renewing free tier", "Built-in canvas editor"],
+        "cons": ["Generations take tokens from daily quota"]
+      }
+    ]
+  },
+  {
+    "id": "chatgpt-plus",
+    "name": "ChatGPT Plus",
+    "category": "chat",
+    "categoryLabel": "✍️ Chat & Reasoning",
+    "priceMonthly": 20,
+    "priceYearly": 240,
+    "description": "$20/month subscription for GPT-4o, advanced reasoning, and file analysis.",
+    "slug": "chatgpt-plus-free-alternatives",
+    "alternatives": [
+      {
+        "name": "DeepSeek V3 / R1",
+        "badge": "Open Weights / 100% Free",
+        "type": "open-source",
+        "description": "Breakthrough open-weight frontier model matching and exceeding GPT-4o and o1 in coding and complex mathematical reasoning.",
+        "url": "https://chat.deepseek.com",
+        "pros": ["Uncensored, elite reasoning", "Available 100% free online", "Open weights"],
+        "cons": ["Occasional high traffic spikes"]
+      },
+      {
+        "name": "Google Gemini 2.0 Flash",
+        "badge": "100% Free Web",
+        "type": "free",
+        "description": "Google's ultra-fast flagship multimodal model with a massive 1-million token context window, free on Google AI Studio.",
+        "url": "https://aistudio.google.com",
+        "pros": ["1M token context window", "Real-time web search integration", "Ultra-fast response time"],
+        "cons": ["Google account required"]
+      },
+      {
+        "name": "Claude 3.5 Sonnet (Free)",
+        "badge": "Freemium",
+        "type": "freemium",
+        "description": "Widely considered the world's best writing and coding assistant, accessible for free with daily message allowances on Claude.ai.",
+        "url": "https://claude.ai",
+        "pros": ["Unmatched nuanced human writing", "Superb coding logic", "Clean UI with Artifacts"],
+        "cons": ["Message limits on free tier"]
+      }
+    ]
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "category": "audio",
+    "categoryLabel": "🎙️ Voice & Audio",
+    "priceMonthly": 22,
+    "priceYearly": 264,
+    "description": "Popular AI voice synthesizer and voice cloner with strict character limits and pricey tiers.",
+    "slug": "elevenlabs-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Kokoro-82M",
+        "badge": "Open Source / 100% Free",
+        "type": "open-source",
+        "description": "Viral lightweight 82M open-source text-to-speech model producing ultra-natural voices at 1/100th the compute cost.",
+        "url": "https://huggingface.co/spaces/hexgrad/Kokoro-TTS",
+        "pros": ["Extremely natural human cadence", "Runs fast even on CPU", "Completely open source"],
+        "cons": ["Limited voice cloning features compared to ElevenLabs"]
+      },
+      {
+        "name": "F5-TTS",
+        "badge": "Open Source / Zero-Shot",
+        "type": "open-source",
+        "description": "Non-autoregressive zero-shot voice cloning model that can replicate any voice from a 5-second sample audio.",
+        "url": "https://github.com/SWivid/F5-TTS",
+        "pros": ["Flawless 5-second voice cloning", "Completely free and local", "Open weights"],
+        "cons": ["Requires Python setup to run locally"]
+      },
+      {
+        "name": "Fish Speech",
+        "badge": "Open Source / Multilingual",
+        "type": "open-source",
+        "description": "Open-source voice platform with multi-lingual emotional speech synthesis and voice customization.",
+        "url": "https://fish.audio",
+        "pros": ["Free web demo available", "Expressive emotion tags", "Open weights"],
+        "cons": ["Daily credits on hosted version"]
+      }
+    ]
+  },
+  {
+    "id": "cursor",
+    "name": "Cursor AI",
+    "category": "code",
+    "categoryLabel": "💻 Coding & Dev",
+    "priceMonthly": 20,
+    "priceYearly": 240,
+    "description": "AI-first code editor fork of VS Code charging $20/month for fast model requests.",
+    "slug": "cursor-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Continue.dev + DeepSeek",
+        "badge": "Open Source / 100% Free",
+        "type": "open-source",
+        "description": "Open-source AI coding extension for VS Code and JetBrains. Connect with free Ollama models or cheap API keys for identical capability.",
+        "url": "https://continue.dev",
+        "pros": ["Works directly in stock VS Code", "Privacy-first, 100% open source", "Zero monthly subscription fee"],
+        "cons": ["Requires configuring an API key or local model"]
+      },
+      {
+        "name": "Windsurf Editor (Free Tier)",
+        "badge": "Free Tier Available",
+        "type": "freemium",
+        "description": "The AI coding environment by Codeium featuring intelligent agentic workflows and multi-file editing with generous free usage.",
+        "url": "https://codeium.com/windsurf",
+        "pros": ["Seamless multi-file refactoring", "Generous free tier", "Fast autocomplete"],
+        "cons": ["Paid tier for unlimited power usage"]
+      },
+      {
+        "name": "Aider CLI",
+        "badge": "100% Open Source",
+        "type": "open-source",
+        "description": "Terminal-based AI pair programmer that edits code across your local git repo with automatic git commits.",
+        "url": "https://aider.chat",
+        "pros": ["Highest benchmark coding scores", "Automatic git commits", "Works with any LLM"],
+        "cons": ["CLI / Terminal interface only"]
+      }
+    ]
+  },
+  {
+    "id": "runway",
+    "name": "Runway Gen-3 / Sora",
+    "category": "video",
+    "categoryLabel": "🎬 Video & Animation",
+    "priceMonthly": 35,
+    "priceYearly": 420,
+    "description": "High-end AI text-to-video generator charging heavy credits per 5-second video clip.",
+    "slug": "runway-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Luma Dream Machine",
+        "badge": "Freemium (30 Free Videos/Mo)",
+        "type": "freemium",
+        "description": "High-fidelity AI video generator offering 30 free video generations per month with realistic motion and camera control.",
+        "url": "https://lumalabs.ai/dream-machine",
+        "pros": ["Realistic physics and lighting", "Generous free generations", "Web browser interface"],
+        "cons": ["Free queue can take a few minutes"]
+      },
+      {
+        "name": "Kling AI",
+        "badge": "Freemium (66 Daily Credits)",
+        "type": "freemium",
+        "description": "Powerful AI video generator producing 1080p realistic videos up to 2 minutes with daily free credits.",
+        "url": "https://klingai.com",
+        "pros": ["Top-tier motion consistency", "Generous daily free credits", "Lip-sync features"],
+        "cons": ["High resolution requires paid tier"]
+      },
+      {
+        "name": "CogVideoX",
+        "badge": "100% Open Source",
+        "type": "open-source",
+        "description": "Open weights text-to-video model by THUDM that can be run on consumer GPUs or tried free on HuggingFace.",
+        "url": "https://huggingface.co/spaces/THUDM/CogVideoX-5B-Space",
+        "pros": ["Zero subscription cost", "Open weights", "Continuously improving"],
+        "cons": ["Demands heavy VRAM for local execution"]
+      }
+    ]
+  },
+  {
+    "id": "jasper",
+    "name": "Jasper AI",
+    "category": "writing",
+    "categoryLabel": "✍️ Copywriting & Marketing",
+    "priceMonthly": 49,
+    "priceYearly": 588,
+    "description": "Enterprise marketing copywriter starting at a staggering $49/month for basic templates.",
+    "slug": "jasper-ai-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Rytr (Free Tier)",
+        "badge": "Freemium (10k chars/mo)",
+        "type": "freemium",
+        "description": "Lightweight AI copywriting assistant offering 40+ use cases and 10,000 free characters every month.",
+        "url": "https://rytr.me",
+        "pros": ["40+ pre-built marketing templates", "Built-in plagiarism checker", "Clean UI"],
+        "cons": ["10,000 monthly character limit"]
+      },
+      {
+        "name": "Copy.ai Free",
+        "badge": "Freemium (2,000 words/mo)",
+        "type": "freemium",
+        "description": "Full-featured marketing copy and automation platform with 2,000 free words per month.",
+        "url": "https://copy.ai",
+        "pros": ["Social media & ad copy templates", "Brand voice memory", "No credit card needed"],
+        "cons": ["2,000 word monthly cap"]
+      },
+      {
+        "name": "Claude 3.5 Sonnet + Custom Prompts",
+        "badge": "100% Free",
+        "type": "free",
+        "description": "Using raw Claude.ai with tailored marketing prompts produces far superior copy than Jasper's rigid templates.",
+        "url": "https://claude.ai",
+        "pros": ["Far higher creative quality", "No template restrictions", "Completely free"],
+        "cons": ["Requires writing your own prompt"]
+      }
+    ]
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity Pro",
+    "category": "search",
+    "categoryLabel": "🔍 Search & Research",
+    "priceMonthly": 20,
+    "priceYearly": 240,
+    "description": "$20/month AI search engine for research, citations, and model switching.",
+    "slug": "perplexity-pro-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Felo AI Search",
+        "badge": "100% Free / No Limits",
+        "type": "free",
+        "description": "Cross-language AI search engine that searches global sources and synthesizes answers with citations for free.",
+        "url": "https://felo.ai",
+        "pros": ["Mind map generation", "Cross-language search", "100% free with citations"],
+        "cons": ["Newer platform with evolving UI"]
+      },
+      {
+        "name": "Genspark",
+        "badge": "100% Free",
+        "type": "free",
+        "description": "Autonomous AI research engine that generates custom 'Sparkpages' aggregating unbiased information on any topic.",
+        "url": "https://genspark.ai",
+        "pros": ["Visual Sparkpages", "Multi-agent cross validation", "Completely free"],
+        "cons": ["Takes 5-10 seconds to generate deep pages"]
+      },
+      {
+        "name": "You.com (Free Tier)",
+        "badge": "Freemium",
+        "type": "freemium",
+        "description": "Private search engine with free unlimited AI search queries, code execution, and web research.",
+        "url": "https://you.com",
+        "pros": ["Unlimited free web queries", "Source citations", "Clean mobile app"],
+        "cons": ["Advanced models require pro"]
+      }
+    ]
+  }
+]
