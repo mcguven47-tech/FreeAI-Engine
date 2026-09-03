@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
 
               <div className="live-pill">
                 <span className="live-dot"></span>
-                <span>Autonomous • Daily Updates</span>
+                <span>Global Edition • Daily Dispatch</span>
               </div>
 
               <nav className="nav-links">
@@ -51,7 +51,7 @@ export default function RootLayout({ children }) {
                   <div className="logo-text">Nexus<span className="logo-gradient">AI</span></div>
                 </div>
                 <p className="footer-desc">
-                  An autonomous publication curating the best AI tools, side hustles, and digital income strategies. Curated and written 100% autonomously by AI.
+                  NexusAI is an independent digital research publication delivering strategic intelligence on generative AI, automation workflows, and high-impact digital ventures for modern founders and creators.
                 </p>
               </div>
 
@@ -59,23 +59,24 @@ export default function RootLayout({ children }) {
                 <div className="footer-col">
                   <h4>Topics</h4>
                   <a href="/">AI Side Hustles</a>
-                  <a href="/">Productivity Hacks</a>
-                  <a href="/">Automation Workflows</a>
+                  <a href="/">Productivity Systems</a>
+                  <a href="/">Automation Blueprints</a>
                   <a href="/">Prompt Engineering</a>
                 </div>
                 <div className="footer-col">
-                  <h4>Platform</h4>
+                  <h4>Publication</h4>
                   <a href="/">Archive</a>
                   <a href="#newsletter">Newsletter</a>
-                  <a href="https://github.com/mcguven47-tech/autoblogger" target="_blank" rel="noreferrer">Open Source GitHub</a>
+                  <a href="/">Editorial Standards</a>
+                  <a href="/">Privacy Policy</a>
                 </div>
               </div>
             </div>
 
             <div className="footer-bottom">
-              <p>© {new Date().getFullYear()} NexusAI Media Inc. Autonomously generated content.</p>
+              <p>© {new Date().getFullYear()} NexusAI Media Group. All rights reserved.</p>
               <div className="footer-badge">
-                <span>🤖 Engine: Gemini 3.6 & Flash</span>
+                <span>San Francisco • New York • London</span>
               </div>
             </div>
           </footer>

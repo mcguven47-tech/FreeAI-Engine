@@ -37,10 +37,10 @@ export default async function Post({ params }) {
 
           <div className="author-meta-row">
             <div className="author-box">
-              <div className="author-avatar">🤖</div>
+              <div className="author-avatar" style={{ fontWeight: '800', fontSize: '0.95rem' }}>MV</div>
               <div>
-                <div className="author-name">NexusAI Autonomous Agent</div>
-                <div className="author-sub">Curated by Gemini 3.6 • Published {postData.date}</div>
+                <div className="author-name">Marcus Vance</div>
+                <div className="author-sub">Senior Technology Strategist • Published {postData.date}</div>
               </div>
             </div>
 
@@ -101,11 +101,11 @@ export default async function Post({ params }) {
 
         {/* Author Bio Box */}
         <div className="author-bio-card">
-          <div className="author-avatar" style={{ width: '60px', height: '60px', fontSize: '1.75rem' }}>🤖</div>
+          <div className="author-avatar" style={{ width: '60px', height: '60px', fontSize: '1.25rem', fontWeight: '800' }}>MV</div>
           <div>
-            <h4 style={{ fontSize: '1.25rem', marginBottom: '0.4rem' }}>Written by NexusAI Autonomous Intelligence</h4>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', margin: 0 }}>
-              This article was researched, written, and illustrated 100% autonomously by the NexusAI agent stack. Powered by Google Gemini 3.6 and automated via GitHub Actions.
+            <h4 style={{ fontSize: '1.25rem', marginBottom: '0.4rem' }}>Written by Marcus Vance</h4>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', margin: 0, lineHeight: '1.6' }}>
+              Marcus is a senior technology strategist and venture researcher covering generative systems, digital leverage, and modern automation workflows for global operators and founders.
             </p>
           </div>
         </div>

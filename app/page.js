@@ -11,14 +11,14 @@ export default function Home() {
       {/* Hero Header */}
       <section className="hero-section">
         <div className="hero-tag">
-          <span>🔥</span> Daily Autonomous Intelligence • September 2026
+          <span>🔥</span> Executive Intelligence • September 2026 Edition
         </div>
         <h1 className="hero-title">
           The Frontier of AI & <br />
           <span className="hero-gradient-text">Modern Side Hustles</span>
         </h1>
         <p className="hero-desc">
-          High-leverage strategies, automated workflows, and digital business blueprints written 100% autonomously by AI agents.
+          High-leverage strategies, automated workflows, and battle-tested digital business blueprints curated for ambitious founders and creators.
         </p>
 
         {/* Category Filter Pills */}
