@@ -4,6 +4,7 @@ import './globals.css'
 import CommandPalette from './components/CommandPalette'
 import SubmitModal from './components/SubmitModal'
 import { CommandPaletteTrigger, SubmitToolTrigger } from './components/NavTriggers'
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata = {
   title: 'FreeAI Engine — 100% Free Alternatives to Expensive AI Subscriptions',
@@ -125,9 +126,10 @@ export default function RootLayout({ children }) {
           </footer>
         </div>
 
-        {/* Global Mounts: Command Palette & Submit Modal */}
+        {/* Global Mounts: Command Palette & Submit Modal & Vercel Analytics */}
         <CommandPalette tools={tools} />
         <SubmitModal />
+        <Analytics />
       </body>
     </html>
   )
