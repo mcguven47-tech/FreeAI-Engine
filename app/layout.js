@@ -80,7 +80,7 @@ export default function RootLayout({ children }) {
                   <h4>Platform</h4>
                   <a href="/#explorer">Directory Explorer</a>
                   <a href="/#prompt-studio">Super-Prompt Studio</a>
-                  <a href="https://github.com/mcguven47-tech/autoblogger" target="_blank" rel="noreferrer">
+                  <a href="https://github.com/mcguven47-tech/freeai-engine" target="_blank" rel="noreferrer">
                     Community Index
                   </a>
                   <a href="/">Submit a Tool</a>

@@ -137,7 +137,7 @@ def main():
 
                 with open(marketing_file, "w", encoding="utf-8") as f:
                     f.write(f"""# Viral Social Post for: {new_tool['name']}
-Article URL: https://autoblogger-mu.vercel.app/alternatives/{new_tool['slug']}
+Article URL: https://freeai-engine.vercel.app/alternatives/{new_tool['slug']}
 
 Stop paying ${new_tool['priceMonthly']}/month (${new_tool['priceYearly']}/yr) for {new_tool['name']}. 🛑
 
@@ -146,7 +146,7 @@ Here are 3 100% free / open-source alternatives you can use right now:
 1. {new_tool['alternatives'][0]['name']} ({new_tool['alternatives'][0]['badge']})
 → {new_tool['alternatives'][0]['description']}
 
-Full feature breakdown & links: https://autoblogger-mu.vercel.app/alternatives/{new_tool['slug']}
+Full feature breakdown & links: https://freeai-engine.vercel.app/alternatives/{new_tool['slug']}
 """)
                 print(f"Saved viral distribution post to: {marketing_file}")
             else:
