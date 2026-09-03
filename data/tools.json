@@ -310,5 +310,44 @@
         "cons": ["Requires basic Python knowledge"]
       }
     ]
+  },
+  {
+    "id": "wispr-flow",
+    "name": "Wispr Flow",
+    "category": "audio",
+    "categoryLabel": "🎙️ Voice & Audio",
+    "priceMonthly": 15,
+    "priceYearly": 180,
+    "description": "AI voice dictation app for Mac & Windows charging $15/month for unlimited speech-to-text cleanup and formatting.",
+    "slug": "wispr-flow-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Buzz (Whisper.cpp)",
+        "badge": "Open Source / 100% Free",
+        "type": "open-source",
+        "description": "Open-source offline dictation and transcription desktop app powered by OpenAI Whisper and Whisper.cpp. Zero cloud dependency, zero word limits.",
+        "url": "https://github.com/chidiwilliams/buzz",
+        "pros": ["100% offline & private", "No subscription or word limits", "Runs fast on local CPU/GPU"],
+        "cons": ["Requires downloading Whisper model files locally"]
+      },
+      {
+        "name": "MacWhisper / Superwhisper (Free)",
+        "badge": "Free Offline Tier",
+        "type": "free",
+        "description": "Native offline dictation utilizing state-of-the-art Whisper models directly on Apple Silicon and Windows with instant text pasting.",
+        "url": "https://goodsnooze.gumroad.com/l/macwhisper",
+        "pros": ["Blazing fast native dictation", "One-click hotkey to dictate", "Free tier with Tiny/Base models"],
+        "cons": ["Large models require one-off pro license"]
+      },
+      {
+        "name": "WhisperWeb (WebGPU)",
+        "badge": "100% Free / In-Browser",
+        "type": "open-source",
+        "description": "Run OpenAI Whisper directly inside your browser powered by Transformers.js and WebGPU. No installation or account required.",
+        "url": "https://huggingface.co/spaces/Xenova/whisper-web",
+        "pros": ["Zero install, runs in browser", "Hardware-accelerated with WebGPU", "Completely free and open source"],
+        "cons": ["Requires Chrome or modern WebGPU-supported browser"]
+      }
+    ]
   }
 ]

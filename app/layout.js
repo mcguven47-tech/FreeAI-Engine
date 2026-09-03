@@ -76,6 +76,7 @@ export default function RootLayout({ children }) {
                   <a href="/alternatives/elevenlabs-free-alternatives">ElevenLabs Alternatives</a>
                   <a href="/alternatives/runway-free-alternatives">Runway Video Alternatives</a>
                   <a href="/alternatives/skydive-zapier-ai-free-alternatives">Skydive & Zapier AI Alternatives</a>
+                  <a href="/alternatives/wispr-flow-free-alternatives">Wispr Flow Voice Alternatives</a>
                 </div>
                 <div className="footer-col">
                   <h4>Platform</h4>
