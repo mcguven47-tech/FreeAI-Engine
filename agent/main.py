@@ -122,10 +122,15 @@ def main():
     
     content = re.sub(r'^#\s+.*\n+', '', content, count=1)
     
+    import urllib.parse
+    image_prompt = urllib.parse.quote(f"{title} futuristic digital technology 3d glassmorphism aesthetic vibrant cinematic")
+    image_url = f"https://image.pollinations.ai/prompt/{image_prompt}?width=1200&height=630&nologo=true"
+    
     frontmatter = f"""---
 title: "{title}"
 date: "{date_str}"
 description: "Discover the latest insights on {title.lower()} and how to leverage it for your productivity."
+image: "{image_url}"
 ---
 
 """

@@ -2,6 +2,7 @@
 title: "7 Copy-and-Paste AI Side Hustles Making $5,000/Month in 2025"
 date: "2026-09-03"
 description: "Discover the latest insights on 7 copy-and-paste ai side hustles making $5,000/month in 2025 and how to leverage it for your productivity."
+image: "https://image.pollinations.ai/prompt/ai%20robot%20working%20on%20holographic%20laptop%20counting%20money%20cyberpunk%20futuristic%20aesthetic%203d%20glassmorphism?width=1200&height=630&nologo=true"
 ---
 
 Remember when making money online meant spending years learning coding, graphic design, or advanced copywriting? Those days are officially gone. 
