@@ -12,7 +12,7 @@ def get_client():
     return genai.Client(api_key=api_key.strip())
 
 def generate_content(prompt, client, is_system_instruct=True):
-    models_to_try = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"]
+    models_to_try = ["gemini-3.6-flash", "gemini-3.0-flash", "gemini-3-flash"]
     
     config = None
     if is_system_instruct:
