@@ -12,43 +12,69 @@ def get_client():
         return None
     return genai.Client(api_key=api_key.strip())
 
-def generate_content(prompt, client, is_system_instruct=True):
-    models_to_try = ["gemini-3.6-flash"]
-    
+def get_available_models(client):
+    try:
+        discovered = []
+        for m in client.models.list():
+            name = m.name.replace("models/", "")
+            # Only pick text/chat generation models
+            if "gemini" in name and not any(x in name for x in ["embed", "imagen", "robotics", "aqa"]):
+                discovered.append(name)
+        print(f"Discovered active models for your API key: {discovered}")
+        
+        # Sort so that flash models and 3.6 models are prioritized
+        def sort_key(name):
+            score = 0
+            if "3.6" in name: score += 20
+            if "flash" in name: score += 10
+            if "pro" in name: score += 5
+            return -score
+            
+        discovered.sort(key=sort_key)
+        if discovered:
+            return discovered
+    except Exception as e:
+        print(f"Could not fetch model list: {e}")
+        
+    return ["gemini-3.6-flash"]
+
+def generate_content(prompt, client, candidate_models, is_system_instruct=True):
     config = None
     if is_system_instruct:
         config = types.GenerateContentConfig(
             system_instruction="You are an expert tech and productivity blogger. Your goal is to write highly engaging, SEO-optimized, and premium articles in English about AI tools, productivity hacks, and digital side hustles. Output ONLY the raw markdown content without any wrapper code blocks."
         )
 
-    for model_name in models_to_try:
-        for attempt in range(1, 5):
+    for model_name in candidate_models:
+        print(f"Attempting generation with model: {model_name}...")
+        for attempt in range(1, 3):
             try:
-                print(f"Calling Gemini with model: {model_name} (attempt {attempt}/4)...")
                 response = client.models.generate_content(
                     model=model_name,
                     contents=prompt,
                     config=config
                 )
                 if response.text:
-                    print(f"Successfully generated content using {model_name}!")
+                    print(f"SUCCESS! Content generated using {model_name}!")
                     return response.text
             except Exception as e:
-                print(f"Model {model_name} error on attempt {attempt}: {e}")
-                if attempt < 4:
-                    wait_time = attempt * 4
-                    print(f"Temporary issue detected. Waiting {wait_time} seconds before retry...")
-                    time.sleep(wait_time)
+                err_str = str(e)
+                print(f"Model {model_name} attempt {attempt} error: {err_str}")
+                if "503" in err_str or "UNAVAILABLE" in err_str or "429" in err_str:
+                    time.sleep(3)
+                else:
+                    # If it's a 404 or other permanent error for this model, skip immediately to next model
+                    break
             
     return None
 
-def generate_topic(client):
+def generate_topic(client, candidate_models):
     prompt = """
     Brainstorm a highly engaging and trendy blog post title about AI tools or side hustles. 
     It should be catchy, click-worthy, and SEO optimized.
     Respond with ONLY the title, nothing else. Example: "5 AI Tools That Will Replace Your Content Team in 2024"
     """
-    title = generate_content(prompt, client, is_system_instruct=False)
+    title = generate_content(prompt, client, candidate_models, is_system_instruct=False)
     if title:
         return title.strip().replace('"', '').replace('\n', '')
     return "The Future of AI and Productivity"
@@ -64,8 +90,12 @@ def main():
     if not client:
         return
 
+    print("Fetching active models from Google...")
+    candidate_models = get_available_models(client)
+    print(f"Models to try in order: {candidate_models}")
+
     print("Generating topic...")
-    title = generate_topic(client)
+    title = generate_topic(client, candidate_models)
     print(f"Topic selected: {title}")
     
     print("Writing article...")
@@ -82,7 +112,7 @@ def main():
     - Output ONLY the markdown text.
     """
     
-    content = generate_content(prompt, client, is_system_instruct=True)
+    content = generate_content(prompt, client, candidate_models, is_system_instruct=True)
     if not content:
         print("Failed to generate content with all available models.")
         return
