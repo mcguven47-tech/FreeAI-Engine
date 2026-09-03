@@ -271,5 +271,44 @@
         "cons": ["Advanced models require pro"]
       }
     ]
+  },
+  {
+    "id": "skydive",
+    "name": "Skydive & Zapier AI",
+    "category": "agent",
+    "categoryLabel": "🤖 AI Agents & Workflows",
+    "priceMonthly": 20,
+    "priceYearly": 240,
+    "description": "Cloud-based autonomous AI agents and automated workflows charging $20–$50/month for task runs.",
+    "slug": "skydive-zapier-ai-free-alternatives",
+    "alternatives": [
+      {
+        "name": "n8n (Self-Hosted)",
+        "badge": "Open Source / 100% Free",
+        "type": "open-source",
+        "description": "Fair-code licensed workflow automation with native AI agent nodes, LangChain support, and 400+ app integrations with zero execution fees.",
+        "url": "https://n8n.io",
+        "pros": ["Native multi-agent AI nodes", "Self-host for free with Docker", "400+ app integrations"],
+        "cons": ["Requires self-hosting on a basic VPS or local machine"]
+      },
+      {
+        "name": "Activepieces",
+        "badge": "Open Source / No-Code",
+        "type": "open-source",
+        "description": "Open-source Zapier alternative built for speed. Run AI automations, webhooks, and browser actions with an intuitive visual canvas.",
+        "url": "https://www.activepieces.com",
+        "pros": ["Modern intuitive UI", "Open source MIT/fair license", "Generous community edition"],
+        "cons": ["Fewer legacy enterprise connectors than Zapier"]
+      },
+      {
+        "name": "Hugging Face Smolagents",
+        "badge": "100% Open Source / Python",
+        "type": "open-source",
+        "description": "Ultra-lightweight open-source Python library for writing autonomous agents with web search, code execution, and tool calling in under 1,000 lines of code.",
+        "url": "https://github.com/huggingface/smolagents",
+        "pros": ["Zero subscription cost", "Direct local execution", "Works with free open-source models"],
+        "cons": ["Requires basic Python knowledge"]
+      }
+    ]
   }
 ]

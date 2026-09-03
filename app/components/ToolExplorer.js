@@ -15,6 +15,7 @@ export default function ToolExplorer({ initialTools }) {
     { id: 'audio', label: '🎙️ Voice & Audio' },
     { id: 'video', label: '🎬 Video & Animation' },
     { id: 'search', label: '🔍 Search & Research' },
+    { id: 'agent', label: '🤖 AI Agents & Workflows' },
   ]
 
   const filteredTools = useMemo(() => {
