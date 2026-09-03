@@ -4,7 +4,7 @@ import './globals.css'
 import CommandPalette from './components/CommandPalette'
 import SubmitModal from './components/SubmitModal'
 import { CommandPaletteTrigger, SubmitToolTrigger } from './components/NavTriggers'
-import { Analytics } from '@vercel/analytics/react'
+import { Analytics } from '@vercel/analytics/next'
 
 export const metadata = {
   title: 'FreeAI Engine — 100% Free Alternatives to Expensive AI Subscriptions',
