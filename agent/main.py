@@ -149,5 +149,41 @@ image: "{image_url}"
         
     print(f"Article successfully generated and saved to: {file_path}")
 
+    # Generate Viral Reddit Distribution Strategy
+    print("\nGenerating viral Reddit distribution strategy...")
+    article_url = f"https://autoblogger-mu.vercel.app/posts/{slug}"
+    reddit_prompt = f"""
+    Based on the blog post titled "{title}", create an ultra-engaging, high-value Reddit post designed to be posted in subreddits like r/SideHustle, r/ChatGPT, r/Entrepreneur, or r/PassiveIncome.
+    
+    Guidelines for Reddit Virality:
+    - Reddit community HATES blatant self-promotion. The post must deliver 90% of the raw, actionable value right inside the Reddit text so people enthusiastically upvote it.
+    - Title: Catchy, authentic, curiosity-inducing (e.g. "[Breakdown] 7 AI side hustles that actually make money in 2025. Here is the realistic breakdown:").
+    - Body: Breakdown with bullet points, realistic earnings, specific tool names, and practical advice.
+    - Call to Action at the bottom: Subtle, natural citation (e.g. "I wrote a complete step-by-step breakdown with all prompt templates and links on my blog here: {article_url}").
+    - Provide a list of 3-4 recommended subreddits to post in.
+    
+    Output format:
+    # 📌 TARGET SUBREDDITS: ...
+    # 📝 REDDIT POST TITLE: ...
+    ---
+    [Reddit Post Body]
+    """
+    
+    reddit_content = generate_content(reddit_prompt, client, candidate_models, is_system_instruct=False)
+    
+    marketing_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "marketing")
+    os.makedirs(marketing_dir, exist_ok=True)
+    marketing_file = os.path.join(marketing_dir, f"{slug}-reddit.md")
+    
+    with open(marketing_file, "w", encoding="utf-8") as f:
+        f.write(f"# Distribution Package for: {title}\nArticle URL: {article_url}\n\n" + (reddit_content or "Failed to generate Reddit post."))
+        
+    print("\n" + "="*50)
+    print("🔥 READY-TO-POST VIRAL REDDIT PACKAGE CREATED:")
+    print("="*50)
+    if reddit_content:
+        print(reddit_content)
+    print("="*50 + "\n")
+
 if __name__ == "__main__":
     main()
