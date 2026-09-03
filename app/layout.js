@@ -1,4 +1,9 @@
+import fs from 'fs'
+import path from 'path'
 import './globals.css'
+import CommandPalette from './components/CommandPalette'
+import SubmitModal from './components/SubmitModal'
+import { CommandPaletteTrigger, SubmitToolTrigger } from './components/NavTriggers'
 
 export const metadata = {
   title: 'FreeAI Engine — 100% Free Alternatives to Expensive AI Subscriptions',
@@ -6,7 +11,20 @@ export const metadata = {
   keywords: 'free ai tools, midjourney alternatives, chatgpt free alternatives, cursor free alternatives, open source ai, free prompt generator',
 }
 
+function getTools() {
+  try {
+    const filePath = path.join(process.cwd(), 'data', 'tools.json')
+    const fileContents = fs.readFileSync(filePath, 'utf8')
+    return JSON.parse(fileContents)
+  } catch (err) {
+    console.error('Error reading tools.json in layout:', err)
+    return []
+  }
+}
+
 export default function RootLayout({ children }) {
+  const tools = getTools()
+
   return (
     <html lang="en">
       <head>
@@ -35,15 +53,21 @@ export default function RootLayout({ children }) {
                 <span>$1.4M+ Community Savings</span>
               </div>
 
+              {/* Center Command Palette Trigger Button */}
+              <CommandPaletteTrigger />
+
               <nav className="nav-links">
                 <a href="/#explorer" className="nav-link">
-                  Find Alternatives
+                  Alternatives
                 </a>
                 <a href="/#prompt-studio" className="nav-link">
                   Prompt Studio
                 </a>
+                <SubmitToolTrigger className="btn-secondary-nav">
+                  + Submit Tool
+                </SubmitToolTrigger>
                 <a href="/#explorer" className="btn-primary">
-                  Explore Free Tools
+                  Explore Tools
                 </a>
               </nav>
             </div>
@@ -75,7 +99,7 @@ export default function RootLayout({ children }) {
                   <a href="/alternatives/cursor-free-alternatives">Cursor AI Alternatives</a>
                   <a href="/alternatives/elevenlabs-free-alternatives">ElevenLabs Alternatives</a>
                   <a href="/alternatives/runway-free-alternatives">Runway Video Alternatives</a>
-                  <a href="/alternatives/skydive-zapier-ai-free-alternatives">Skydive & Zapier AI Alternatives</a>
+                  <a href="/alternatives/skydive-zapier-ai-free-alternatives">Skydive &amp; Zapier AI Alternatives</a>
                   <a href="/alternatives/wispr-flow-free-alternatives">Wispr Flow Voice Alternatives</a>
                 </div>
                 <div className="footer-col">
@@ -85,7 +109,9 @@ export default function RootLayout({ children }) {
                   <a href="https://github.com/mcguven47-tech/freeai-engine" target="_blank" rel="noreferrer">
                     Community Index
                   </a>
-                  <a href="/">Submit a Tool</a>
+                  <SubmitToolTrigger className="footer-link-btn">
+                    Submit a Tool
+                  </SubmitToolTrigger>
                 </div>
               </div>
             </div>
@@ -98,6 +124,10 @@ export default function RootLayout({ children }) {
             </div>
           </footer>
         </div>
+
+        {/* Global Mounts: Command Palette & Submit Modal */}
+        <CommandPalette tools={tools} />
+        <SubmitModal />
       </body>
     </html>
   )
