@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from 'react'
 
+import { CHECKOUT_CONFIG } from '../../data/checkoutConfig'
+
 export default function SubmitModal() {
   const [isOpen, setIsOpen] = useState(false)
   const [submitted, setSubmitted] = useState(false)
@@ -28,6 +30,14 @@ export default function SubmitModal() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+
+    // If maker selected $20 featured tier and checkoutUrl is configured (Lemon Squeezy / Shopier / Stripe), redirect
+    if (tier === 'featured' && CHECKOUT_CONFIG.featuredListing.checkoutUrl) {
+      window.open(CHECKOUT_CONFIG.featuredListing.checkoutUrl, '_blank')
+      setSubmitted(true)
+      return
+    }
+
     setSubmitted(true)
   }
 

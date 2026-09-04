@@ -37,3 +37,22 @@ export function SubmitToolTrigger({ children, className = '' }) {
     </button>
   )
 }
+
+export function TipModalTrigger({ children, className = '' }) {
+  const handleClick = (e) => {
+    e.preventDefault()
+    window.dispatchEvent(new CustomEvent('open-tip-modal'))
+  }
+
+  return (
+    <button
+      type="button"
+      onClick={handleClick}
+      className={className || 'coffee-nav-btn'}
+      title="Support FreeAI Engine with a $3 coffee tip"
+    >
+      {children || '☕ Tip $3'}
+    </button>
+  )
+}
+

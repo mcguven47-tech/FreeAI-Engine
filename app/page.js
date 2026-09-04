@@ -5,6 +5,7 @@ import PromptStudio from './components/PromptStudio'
 import SavingsCalculator from './components/SavingsCalculator'
 import Marquee from './components/Marquee'
 import VisualShowcase from './components/VisualShowcase'
+import StarterVault from './components/StarterVault'
 
 function getTools() {
   try {
@@ -33,14 +34,14 @@ export default function Home() {
       {/* Hero Header */}
       <section className="hero-section">
         <div className="hero-tag">
-          <span className="live-sparkle">✨</span> Verified for 2026 • The Open AI Freedom Engine
+          <span className="live-sparkle">✨</span> Verified for 2026 • The Free AI People&apos;s Engine
         </div>
         <h1 className="hero-title">
           Stop Paying $100s for AI. <br />
-          <span className="hero-gradient-text">Switch to Free Alternatives.</span>
+          <span className="hero-gradient-text">Switch to 100% Free Alternatives.</span>
         </h1>
         <p className="hero-desc">
-          Compare expensive proprietary AI tools against battle-tested free, freemium, and open-source replacements. Keep your money without sacrificing quality.
+          For students, creators, and office professionals: replace Midjourney, ChatGPT Plus, and ElevenLabs with 1-click browser alternatives. Keep your money without sacrificing quality.
         </p>
 
         {/* Action Buttons */}
@@ -48,8 +49,11 @@ export default function Home() {
           <a href="#calculator" className="btn-primary hero-btn-main">
             ⚡ Calculate My Savings
           </a>
+          <a href="#starter-vault" className="btn-secondary hero-btn-vault">
+            🎁 Get $9 Starter Vault
+          </a>
           <a href="#explorer" className="btn-ghost hero-btn-secondary">
-            🔍 Explore 50+ Free Tools
+            🔍 Explore Free Tools
           </a>
         </div>
       </section>
@@ -64,6 +68,9 @@ export default function Home() {
       <section id="calculator" className="calculator-section">
         <SavingsCalculator />
       </section>
+
+      {/* Consumer Monetization: $9 Starter Vault & Ready-Made Workflows */}
+      <StarterVault />
 
       {/* Main Interactive Tool Explorer (Live Search & Category Filter) */}
       <ToolExplorer initialTools={tools} />

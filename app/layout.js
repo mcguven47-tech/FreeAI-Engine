@@ -3,7 +3,8 @@ import path from 'path'
 import './globals.css'
 import CommandPalette from './components/CommandPalette'
 import SubmitModal from './components/SubmitModal'
-import { CommandPaletteTrigger, SubmitToolTrigger } from './components/NavTriggers'
+import TipJarModal from './components/TipJarModal'
+import { CommandPaletteTrigger, SubmitToolTrigger, TipModalTrigger } from './components/NavTriggers'
 import { Analytics } from '@vercel/analytics/react'
 
 export const metadata = {
@@ -61,15 +62,16 @@ export default function RootLayout({ children }) {
                 <a href="/#explorer" className="nav-link">
                   Alternatives
                 </a>
-                <a href="/#prompt-studio" className="nav-link">
-                  Prompt Studio
+                <a href="/#starter-vault" className="nav-link vault-nav-link">
+                  🎁 Starter Vault ($9)
                 </a>
+                <a href="/#prompt-studio" className="nav-link">
+                  Prompts
+                </a>
+                <TipModalTrigger className="coffee-nav-btn" />
                 <SubmitToolTrigger className="btn-secondary-nav">
                   + Submit Tool
                 </SubmitToolTrigger>
-                <a href="/#explorer" className="btn-primary">
-                  Explore Tools
-                </a>
               </nav>
             </div>
           </header>
@@ -126,9 +128,10 @@ export default function RootLayout({ children }) {
           </footer>
         </div>
 
-        {/* Global Mounts: Command Palette & Submit Modal & Vercel Analytics */}
+        {/* Global Mounts: Command Palette, Modals & Vercel Analytics */}
         <CommandPalette tools={tools} />
         <SubmitModal />
+        <TipJarModal />
         <Analytics />
       </body>
     </html>
