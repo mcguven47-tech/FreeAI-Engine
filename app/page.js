@@ -33,20 +33,20 @@ export default function Home() {
           <span className="live-sparkle">✨</span> Verified for 2026 • The Free AI People&apos;s Engine
         </div>
         <h1 className="hero-title">
-          Pahalı Yapay Zekalara Servet Ödemeyin. <br />
-          <span className="hero-gradient-text">%100 Ücretsiz Alternatifleri Keşfedin.</span>
+          Stop Paying $100s for AI. <br />
+          <span className="hero-gradient-text">Switch to 100% Free Alternatives.</span>
         </h1>
         <p className="hero-desc">
-          Öğrenciler, çalışanlar ve içerik üreticileri için: Midjourney, ChatGPT Plus ve ElevenLabs yerine tarayıcıda çalışan ücretsiz araçlar.
+          For students, creators, and office professionals: replace Midjourney, ChatGPT Plus, and ElevenLabs with 1-click browser alternatives. Keep your money without sacrificing quality.
         </p>
 
         {/* Quick Route Shortcuts */}
         <div className="hero-actions-row">
           <Link href="/vault" className="btn-primary hero-btn-main">
-            🎁 Ürünlerimiz ($9 Vault)
+            🎁 Get $9 Starter Vault
           </Link>
           <Link href="/calculator" className="btn-secondary hero-btn-vault">
-            💰 Tasarruf Hesaplayıcı
+            💰 Savings Calculator
           </Link>
           <Link href="/prompt-studio" className="btn-ghost hero-btn-secondary">
             ✍️ Prompt Studio

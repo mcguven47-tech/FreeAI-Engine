@@ -61,23 +61,23 @@ export default function RootLayout({ children }) {
 
               <nav className="nav-links">
                 <Link href="/" className="nav-link">
-                  🔍 Araçlar
+                  🔍 Free Tools
                 </Link>
                 <Link href="/vault" className="nav-link vault-nav-link">
-                  🎁 Ürünlerimiz ($9)
+                  🎁 Starter Vault ($9)
                 </Link>
                 <Link href="/calculator" className="nav-link">
-                  💰 Hesaplayıcı
+                  💰 Calculator
                 </Link>
                 <Link href="/prompt-studio" className="nav-link">
-                  ✍️ Promptlar
+                  ✍️ Prompt Studio
                 </Link>
                 <Link href="/about" className="nav-link">
-                  📖 Hakkımızda
+                  📖 About Us
                 </Link>
                 <TipModalTrigger className="coffee-nav-btn" />
                 <SubmitToolTrigger className="btn-secondary-nav">
-                  + Araç Ekle
+                  + Submit Tool
                 </SubmitToolTrigger>
               </nav>
             </div>
@@ -114,13 +114,13 @@ export default function RootLayout({ children }) {
                 </div>
                 <div className="footer-col">
                   <h4>Platform</h4>
-                  <Link href="/">🔍 Araçlar Dizini</Link>
-                  <Link href="/vault">🎁 Ürünlerimiz ($9 Vault)</Link>
-                  <Link href="/calculator">💰 Tasarruf Hesaplayıcı</Link>
+                  <Link href="/">🔍 Free Directory</Link>
+                  <Link href="/vault">🎁 Starter Vault ($9)</Link>
+                  <Link href="/calculator">💰 Savings Calculator</Link>
                   <Link href="/prompt-studio">✍️ Prompt Studio</Link>
-                  <Link href="/about">📖 Hakkımızda</Link>
+                  <Link href="/about">📖 About Us</Link>
                   <SubmitToolTrigger className="footer-link-btn">
-                    + Araç Gönder
+                    + Submit a Tool
                   </SubmitToolTrigger>
                 </div>
               </div>
