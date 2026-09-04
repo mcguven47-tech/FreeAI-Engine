@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
-import VisualShowcase from './components/VisualShowcase'
-import TabbedHub from './components/TabbedHub'
+import Link from 'next/link'
+import ToolExplorer from './components/ToolExplorer'
 
 function getTools() {
   try {
@@ -27,60 +27,35 @@ export default function Home() {
         <div className="grid-overlay"></div>
       </div>
 
-      {/* Hero Header - Compact & Impactful */}
-      <section className="hero-section" style={{ paddingBottom: '1rem', marginBottom: '1.5rem' }}>
+      {/* Hero Header - Crisp & Direct */}
+      <section className="hero-section" style={{ paddingBottom: '1.5rem', marginBottom: '2rem' }}>
         <div className="hero-tag">
           <span className="live-sparkle">✨</span> Verified for 2026 • The Free AI People&apos;s Engine
         </div>
-        <h1 className="hero-title" style={{ marginBottom: '0.75rem' }}>
-          Stop Paying $100s for AI. <br />
-          <span className="hero-gradient-text">Switch to 100% Free Alternatives.</span>
+        <h1 className="hero-title">
+          Pahalı Yapay Zekalara Servet Ödemeyin. <br />
+          <span className="hero-gradient-text">%100 Ücretsiz Alternatifleri Keşfedin.</span>
         </h1>
-        <p className="hero-desc" style={{ marginBottom: '1rem' }}>
-          For students, creators, and office professionals: replace Midjourney, ChatGPT Plus, and ElevenLabs with 1-click browser alternatives.
-        </p>
-      </section>
-
-      {/* FRONT & CENTER INTERACTIVE APP TOOLBAR & VIEWS (Zero Scroll Needed) */}
-      <TabbedHub tools={tools} />
-
-      {/* Tines-Style Interactive Visual Showcase Window */}
-      <div style={{ marginTop: '5rem' }}>
-        <VisualShowcase />
-      </div>
-
-      {/* Tines-Inspired Value Manifesto Bento Grid */}
-      <section className="manifesto-section">
-        <div className="manifesto-badge">💎 The Open Source Advantage</div>
-        <h3 className="manifesto-title">Why the Free Stack is Winning in 2026</h3>
-        <p className="manifesto-desc">
-          Proprietary AI companies charge $20 to $50/month to lock you into closed APIs. The open weights revolution has leveled the playing field.
+        <p className="hero-desc">
+          Öğrenciler, çalışanlar ve içerik üreticileri için: Midjourney, ChatGPT Plus ve ElevenLabs yerine tarayıcıda çalışan ücretsiz araçlar.
         </p>
 
-        <div className="manifesto-grid">
-          <div className="manifesto-card">
-            <div className="m-card-icon">⚡</div>
-            <h4>Zero Compute Markup</h4>
-            <p>
-              Tools like Flux.1 and DeepSeek run with open weights. You pay $0 instead of paying a 500% markup on cloud subscription seats.
-            </p>
-          </div>
-          <div className="manifesto-card">
-            <div className="m-card-icon">🔒</div>
-            <h4>Total Offline Privacy</h4>
-            <p>
-              Tools like Fooocus, Buzz (Whisper.cpp), and Continue.dev run locally on your hardware. Your data, voice, and code never leave your machine.
-            </p>
-          </div>
-          <div className="manifesto-card">
-            <div className="m-card-icon">🚀</div>
-            <h4>Uncapped Creativity</h4>
-            <p>
-              No arbitrary daily prompt throttles or token rate limits. Create unlimited photorealistic art, clone voices, and generate code without worrying about subscription tiers.
-            </p>
-          </div>
+        {/* Quick Route Shortcuts */}
+        <div className="hero-actions-row">
+          <Link href="/vault" className="btn-primary hero-btn-main">
+            🎁 Ürünlerimiz ($9 Vault)
+          </Link>
+          <Link href="/calculator" className="btn-secondary hero-btn-vault">
+            💰 Tasarruf Hesaplayıcı
+          </Link>
+          <Link href="/prompt-studio" className="btn-ghost hero-btn-secondary">
+            ✍️ Prompt Studio
+          </Link>
         </div>
       </section>
+
+      {/* Main Interactive Tool Explorer (Live Search, Personas, 1-Click Web Filter) */}
+      <ToolExplorer initialTools={tools} />
     </div>
   )
 }

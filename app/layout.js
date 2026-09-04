@@ -1,5 +1,6 @@
 import fs from 'fs'
 import path from 'path'
+import Link from 'next/link'
 import './globals.css'
 import CommandPalette from './components/CommandPalette'
 import SubmitModal from './components/SubmitModal'
@@ -59,18 +60,24 @@ export default function RootLayout({ children }) {
               <CommandPaletteTrigger />
 
               <nav className="nav-links">
-                <a href="/#explorer" className="nav-link">
-                  Alternatives
-                </a>
-                <a href="/#starter-vault" className="nav-link vault-nav-link">
-                  🎁 Starter Vault ($9)
-                </a>
-                <a href="/#prompt-studio" className="nav-link">
-                  Prompts
-                </a>
+                <Link href="/" className="nav-link">
+                  🔍 Araçlar
+                </Link>
+                <Link href="/vault" className="nav-link vault-nav-link">
+                  🎁 Ürünlerimiz ($9)
+                </Link>
+                <Link href="/calculator" className="nav-link">
+                  💰 Hesaplayıcı
+                </Link>
+                <Link href="/prompt-studio" className="nav-link">
+                  ✍️ Promptlar
+                </Link>
+                <Link href="/about" className="nav-link">
+                  📖 Hakkımızda
+                </Link>
                 <TipModalTrigger className="coffee-nav-btn" />
                 <SubmitToolTrigger className="btn-secondary-nav">
-                  + Submit Tool
+                  + Araç Ekle
                 </SubmitToolTrigger>
               </nav>
             </div>
@@ -107,13 +114,13 @@ export default function RootLayout({ children }) {
                 </div>
                 <div className="footer-col">
                   <h4>Platform</h4>
-                  <a href="/#explorer">Directory Explorer</a>
-                  <a href="/#prompt-studio">Super-Prompt Studio</a>
-                  <a href="https://github.com/mcguven47-tech/freeai-engine" target="_blank" rel="noreferrer">
-                    Community Index
-                  </a>
+                  <Link href="/">🔍 Araçlar Dizini</Link>
+                  <Link href="/vault">🎁 Ürünlerimiz ($9 Vault)</Link>
+                  <Link href="/calculator">💰 Tasarruf Hesaplayıcı</Link>
+                  <Link href="/prompt-studio">✍️ Prompt Studio</Link>
+                  <Link href="/about">📖 Hakkımızda</Link>
                   <SubmitToolTrigger className="footer-link-btn">
-                    Submit a Tool
+                    + Araç Gönder
                   </SubmitToolTrigger>
                 </div>
               </div>
