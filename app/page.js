@@ -1,11 +1,8 @@
 import fs from 'fs'
 import path from 'path'
-import ToolExplorer from './components/ToolExplorer'
-import PromptStudio from './components/PromptStudio'
-import SavingsCalculator from './components/SavingsCalculator'
 import Marquee from './components/Marquee'
 import VisualShowcase from './components/VisualShowcase'
-import StarterVault from './components/StarterVault'
+import TabbedHub from './components/TabbedHub'
 
 function getTools() {
   try {
@@ -46,14 +43,14 @@ export default function Home() {
 
         {/* Action Buttons */}
         <div className="hero-actions-row">
-          <a href="#calculator" className="btn-primary hero-btn-main">
-            ⚡ Calculate My Savings
+          <a href="#main-hub" className="btn-primary hero-btn-main">
+            ⚡ Explore Free Directory
           </a>
-          <a href="#starter-vault" className="btn-secondary hero-btn-vault">
+          <a href="#calculator" className="btn-secondary hero-btn-vault">
+            💰 Savings Calculator
+          </a>
+          <a href="#starter-vault" className="btn-ghost hero-btn-secondary">
             🎁 Get $9 Starter Vault
-          </a>
-          <a href="#explorer" className="btn-ghost hero-btn-secondary">
-            🔍 Explore Free Tools
           </a>
         </div>
       </section>
@@ -64,19 +61,8 @@ export default function Home() {
       {/* Infinite Moving Marquee of Free Models */}
       <Marquee />
 
-      {/* Interactive Tines-Style Savings Calculator & Node Connector */}
-      <section id="calculator" className="calculator-section">
-        <SavingsCalculator />
-      </section>
-
-      {/* Consumer Monetization: $9 Starter Vault & Ready-Made Workflows */}
-      <StarterVault />
-
-      {/* Main Interactive Tool Explorer (Live Search & Category Filter) */}
-      <ToolExplorer initialTools={tools} />
-
-      {/* Interactive Super-Prompt Studio */}
-      <PromptStudio />
+      {/* Interactive Tabbed Application Hub (Directory, Calculator, Vault, Prompts) */}
+      <TabbedHub tools={tools} />
 
       {/* Tines-Inspired Value Manifesto Bento Grid */}
       <section className="manifesto-section">
@@ -105,7 +91,7 @@ export default function Home() {
             <div className="m-card-icon">🚀</div>
             <h4>Uncapped Creativity</h4>
             <p>
-              No artificial message limits, no strict rate-limiting, and no random account bans. You own your workflow end-to-end.
+              No arbitrary daily prompt throttles or token rate limits. Create unlimited photorealistic art, clone voices, and generate code without worrying about subscription tiers.
             </p>
           </div>
         </div>
