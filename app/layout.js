@@ -12,6 +12,28 @@ export const metadata = {
   title: 'FreeAI Engine — 100% Free Alternatives to Expensive AI Subscriptions',
   description: 'Stop paying $20–$50/month for Midjourney, ChatGPT Plus, ElevenLabs, and Cursor. Discover the best free, freemium, and open-source AI alternatives with zero hidden fees.',
   keywords: 'free ai tools, midjourney alternatives, chatgpt free alternatives, cursor free alternatives, open source ai, free prompt generator',
+  openGraph: {
+    title: 'FreeAI Engine — 100% Free Alternatives to Expensive AI Subscriptions',
+    description: 'Stop paying $100s for AI. Switch to 100% free, open-source replacements for Midjourney, ChatGPT, ElevenLabs & Cursor.',
+    url: 'https://freeai-engine.vercel.app',
+    siteName: 'FreeAI Engine',
+    images: [
+      {
+        url: '/images/hero-workflow.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'FreeAI Engine Interface',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'FreeAI Engine — 100% Free Alternatives to Expensive AI Subscriptions',
+    description: 'Stop paying $100s for AI. Switch to 100% free, open-source replacements for Midjourney, ChatGPT, ElevenLabs & Cursor.',
+    images: ['/images/hero-workflow.jpg'],
+  },
 }
 
 function getTools() {
