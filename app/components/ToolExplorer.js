@@ -114,6 +114,13 @@ export default function ToolExplorer({ initialTools }) {
     })
   }, [initialTools, activePersona, activeCategory, webOnly, searchQuery])
 
+  // Compact View: Show top 3 by default to eliminate long vertical scrolling
+  const [displayLimit, setDisplayLimit] = useState(3)
+  const isFiltering = !!searchQuery || activeCategory !== 'all' || activePersona !== 'all' || webOnly
+  const displayedTools = isFiltering || displayLimit === null
+    ? filteredTools
+    : filteredTools.slice(0, displayLimit)
+
   // Total savings across the catalog
   const totalYearlySavings = useMemo(() => {
     return initialTools.reduce((acc, t) => acc + (t.priceYearly || 0), 0)
@@ -241,7 +248,7 @@ export default function ToolExplorer({ initialTools }) {
         </div>
       ) : (
         <div className="tools-comparison-grid">
-          {filteredTools.map((tool) => (
+          {displayedTools.map((tool) => (
             <div key={tool.id} className="comparison-card">
               {/* Expensive Tool Header */}
               <div className="expensive-tool-header">
@@ -339,6 +346,41 @@ export default function ToolExplorer({ initialTools }) {
               </div>
             </div>
           ))}
+        </div>
+      )}
+
+      {/* Compact View: Show More / Collapse Controls */}
+      {!isFiltering && filteredTools.length > 3 && (
+        <div className="load-more-section">
+          {displayLimit !== null ? (
+            <div className="load-more-inner">
+              <button
+                type="button"
+                className="btn-load-more"
+                onClick={() => setDisplayLimit(null)}
+              >
+                <span>⚡ Show All {filteredTools.length} Free Comparison Stacks</span>
+                <span className="load-more-pill">+{filteredTools.length - displayLimit} More</span>
+              </button>
+              <p className="load-more-subtext">
+                Or use the search bar / category pills above to instantly find any tool.
+              </p>
+            </div>
+          ) : (
+            <div className="load-more-inner">
+              <button
+                type="button"
+                className="btn-collapse"
+                onClick={() => {
+                  setDisplayLimit(3)
+                  const el = document.getElementById('explorer')
+                  if (el) el.scrollIntoView({ behavior: 'smooth' })
+                }}
+              >
+                ▲ Collapse to Top 3 Featured Tools
+              </button>
+            </div>
+          )}
         </div>
       )}
     </section>
