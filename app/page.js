@@ -1,6 +1,5 @@
 import fs from 'fs'
 import path from 'path'
-import Marquee from './components/Marquee'
 import VisualShowcase from './components/VisualShowcase'
 import TabbedHub from './components/TabbedHub'
 
@@ -28,41 +27,27 @@ export default function Home() {
         <div className="grid-overlay"></div>
       </div>
 
-      {/* Hero Header */}
-      <section className="hero-section">
+      {/* Hero Header - Compact & Impactful */}
+      <section className="hero-section" style={{ paddingBottom: '1rem', marginBottom: '1.5rem' }}>
         <div className="hero-tag">
           <span className="live-sparkle">✨</span> Verified for 2026 • The Free AI People&apos;s Engine
         </div>
-        <h1 className="hero-title">
+        <h1 className="hero-title" style={{ marginBottom: '0.75rem' }}>
           Stop Paying $100s for AI. <br />
           <span className="hero-gradient-text">Switch to 100% Free Alternatives.</span>
         </h1>
-        <p className="hero-desc">
-          For students, creators, and office professionals: replace Midjourney, ChatGPT Plus, and ElevenLabs with 1-click browser alternatives. Keep your money without sacrificing quality.
+        <p className="hero-desc" style={{ marginBottom: '1rem' }}>
+          For students, creators, and office professionals: replace Midjourney, ChatGPT Plus, and ElevenLabs with 1-click browser alternatives.
         </p>
-
-        {/* Action Buttons */}
-        <div className="hero-actions-row">
-          <a href="#main-hub" className="btn-primary hero-btn-main">
-            ⚡ Explore Free Directory
-          </a>
-          <a href="#calculator" className="btn-secondary hero-btn-vault">
-            💰 Savings Calculator
-          </a>
-          <a href="#starter-vault" className="btn-ghost hero-btn-secondary">
-            🎁 Get $9 Starter Vault
-          </a>
-        </div>
       </section>
 
-      {/* Tines-Style Giant Interactive Visual Showcase Window */}
-      <VisualShowcase />
-
-      {/* Infinite Moving Marquee of Free Models */}
-      <Marquee />
-
-      {/* Interactive Tabbed Application Hub (Directory, Calculator, Vault, Prompts) */}
+      {/* FRONT & CENTER INTERACTIVE APP TOOLBAR & VIEWS (Zero Scroll Needed) */}
       <TabbedHub tools={tools} />
+
+      {/* Tines-Style Interactive Visual Showcase Window */}
+      <div style={{ marginTop: '5rem' }}>
+        <VisualShowcase />
+      </div>
 
       {/* Tines-Inspired Value Manifesto Bento Grid */}
       <section className="manifesto-section">

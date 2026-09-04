@@ -32,64 +32,65 @@ export default function TabbedHub({ tools }) {
   const tabs = [
     {
       id: 'directory',
-      label: 'Free Tools Directory',
+      label: '⚡ 50+ Free Tools Directory',
       icon: '🔍',
-      badge: '50+ Verified',
+      badge: 'Active',
       color: 'cyan',
     },
     {
       id: 'calculator',
-      label: 'Savings Calculator',
-      icon: '💰',
-      badge: 'Interactive Audit',
+      label: '💰 Savings Calculator',
+      icon: '📊',
+      badge: 'Audit',
       color: 'emerald',
     },
     {
       id: 'vault',
-      label: 'Starter Vault ($9)',
-      icon: '🎁',
-      badge: 'Workflows & Prompts',
+      label: '🎁 $9 Starter Vault',
+      icon: '🚀',
+      badge: 'Shopier / BMC',
       color: 'pink',
     },
     {
       id: 'prompts',
-      label: 'Prompt Studio',
-      icon: '✍️',
-      badge: 'Formula Builder',
+      label: '✍️ Super-Prompt Studio',
+      icon: '✨',
+      badge: 'Formulas',
       color: 'purple',
     },
   ]
 
   const handleTabClick = (tabId) => {
     setActiveTab(tabId)
-    // Smooth scroll tab into view if needed
-    const hubElement = document.getElementById('main-hub')
-    if (hubElement) {
-      hubElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
   }
 
   return (
     <div id="main-hub" className="tabbed-hub-root">
-      {/* Sticky / Floating Segmented Tab Switcher Bar */}
+      {/* Front & Center App Toolbar */}
       <div className="hub-tabs-wrapper">
-        <div className="hub-tabs-container">
-          {tabs.map((tab) => {
-            const isActive = activeTab === tab.id
-            return (
-              <button
-                key={tab.id}
-                type="button"
-                className={`hub-tab-btn ${isActive ? `active active-${tab.color}` : ''}`}
-                onClick={() => handleTabClick(tab.id)}
-              >
-                <span className="hub-tab-icon">{tab.icon}</span>
-                <span className="hub-tab-label">{tab.label}</span>
-                <span className="hub-tab-badge">{tab.badge}</span>
-                {isActive && <span className="hub-tab-active-indicator"></span>}
-              </button>
-            )
-          })}
+        <div className="main-app-toolbar">
+          <div className="toolbar-header-pill">
+            <span className="toolbar-live-dot"></span>
+            <span className="toolbar-title">TOOLBAR:</span>
+          </div>
+
+          <div className="toolbar-buttons-cluster">
+            {tabs.map((tab) => {
+              const isActive = activeTab === tab.id
+              return (
+                <button
+                  key={tab.id}
+                  type="button"
+                  className={`toolbar-tab-btn ${isActive ? `active active-${tab.color}` : ''}`}
+                  onClick={() => handleTabClick(tab.id)}
+                >
+                  <span className="toolbar-tab-icon">{tab.icon}</span>
+                  <span className="toolbar-tab-label">{tab.label}</span>
+                  <span className="toolbar-tab-badge">{tab.badge}</span>
+                </button>
+              )
+            })}
+          </div>
         </div>
       </div>
 
@@ -103,7 +104,7 @@ export default function TabbedHub({ tools }) {
 
         {activeTab === 'calculator' && (
           <div className="tab-pane fade-in-active">
-            <section id="calculator" className="calculator-section" style={{ marginTop: '1rem' }}>
+            <section id="calculator" className="calculator-section" style={{ marginTop: '0.5rem' }}>
               <SavingsCalculator />
             </section>
           </div>

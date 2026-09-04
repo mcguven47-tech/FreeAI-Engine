@@ -3109,130 +3109,161 @@ a {
    ========================================================================== */
 .tabbed-hub-root {
   max-width: 1240px;
-  margin: 2.5rem auto 4rem auto;
+  margin: 1rem auto 4rem auto;
   padding: 0 1.5rem;
-  scroll-margin-top: 100px;
+  scroll-margin-top: 80px;
 }
 
 .hub-tabs-wrapper {
   position: sticky;
-  top: 80px;
-  z-index: 40;
+  top: 75px;
+  z-index: 45;
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.25rem;
   padding: 0.5rem 0;
 }
 
-.hub-tabs-container {
+.main-app-toolbar {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  background: rgba(13, 13, 20, 0.88);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  padding: 0.4rem;
-  border-radius: 20px;
+  gap: 0.75rem;
+  background: rgba(14, 14, 22, 0.95);
+  border: 2px solid rgba(139, 92, 246, 0.4);
+  padding: 0.5rem 0.65rem;
+  border-radius: 22px;
   backdrop-filter: blur(24px);
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.75), 0 0 25px rgba(139, 92, 246, 0.2);
   max-width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
 
-.hub-tabs-container::-webkit-scrollbar {
+.main-app-toolbar::-webkit-scrollbar {
   display: none;
 }
 
-.hub-tab-btn {
+.toolbar-header-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.toolbar-live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 8px #34d399;
+}
+
+.toolbar-title {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #94a3b8;
+  letter-spacing: 0.06em;
+}
+
+.toolbar-buttons-cluster {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toolbar-tab-btn {
   position: relative;
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
   padding: 0.75rem 1.35rem;
   border-radius: 14px;
-  background: transparent;
-  border: 1px solid transparent;
-  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   white-space: nowrap;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hub-tab-btn:hover {
-  color: var(--text-primary);
-  background: rgba(255, 255, 255, 0.04);
+.toolbar-tab-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
 }
 
-.hub-tab-icon {
+.toolbar-tab-icon {
   font-size: 1.15rem;
 }
 
-.hub-tab-badge {
+.toolbar-tab-badge {
   font-size: 0.72rem;
   padding: 0.18rem 0.5rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
-  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
   font-weight: 700;
-  letter-spacing: 0.02em;
 }
 
-/* Active State Radiance */
-.hub-tab-btn.active {
+/* Active Radiance */
+.toolbar-tab-btn.active {
   color: #ffffff;
-  font-weight: 700;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-1px);
 }
 
-.hub-tab-btn.active-cyan {
-  background: linear-gradient(135deg, rgba(6, 182, 212, 0.25), rgba(59, 130, 246, 0.25));
-  border-color: rgba(6, 182, 212, 0.5);
-  box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
+.toolbar-tab-btn.active-cyan {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.35), rgba(59, 130, 246, 0.35));
+  border-color: #38bdf8;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.35);
 }
 
-.hub-tab-btn.active-cyan .hub-tab-badge {
-  background: rgba(6, 182, 212, 0.25);
+.toolbar-tab-btn.active-cyan .toolbar-tab-badge {
+  background: rgba(6, 182, 212, 0.4);
   color: #67e8f9;
 }
 
-.hub-tab-btn.active-emerald {
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(5, 150, 105, 0.25));
-  border-color: rgba(16, 185, 129, 0.5);
-  box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+.toolbar-tab-btn.active-emerald {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.35), rgba(5, 150, 105, 0.35));
+  border-color: #34d399;
+  box-shadow: 0 0 20px rgba(52, 211, 153, 0.35);
 }
 
-.hub-tab-btn.active-emerald .hub-tab-badge {
-  background: rgba(16, 185, 129, 0.25);
+.toolbar-tab-btn.active-emerald .toolbar-tab-badge {
+  background: rgba(16, 185, 129, 0.4);
   color: #6ee7b7;
 }
 
-.hub-tab-btn.active-pink {
-  background: linear-gradient(135deg, rgba(236, 72, 153, 0.25), rgba(168, 85, 247, 0.25));
-  border-color: rgba(236, 72, 153, 0.5);
-  box-shadow: 0 0 20px rgba(236, 72, 153, 0.2);
+.toolbar-tab-btn.active-pink {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.35), rgba(168, 85, 247, 0.35));
+  border-color: #f472b6;
+  box-shadow: 0 0 20px rgba(244, 114, 182, 0.35);
 }
 
-.hub-tab-btn.active-pink .hub-tab-badge {
-  background: rgba(236, 72, 153, 0.25);
-  color: #f472b6;
+.toolbar-tab-btn.active-pink .toolbar-tab-badge {
+  background: rgba(236, 72, 153, 0.4);
+  color: #fbcfe8;
 }
 
-.hub-tab-btn.active-purple {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.25), rgba(99, 102, 241, 0.25));
-  border-color: rgba(139, 92, 246, 0.5);
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+.toolbar-tab-btn.active-purple {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.35), rgba(99, 102, 241, 0.35));
+  border-color: #a78bfa;
+  box-shadow: 0 0 20px rgba(167, 139, 250, 0.35);
 }
 
-.hub-tab-btn.active-purple .hub-tab-badge {
-  background: rgba(139, 92, 246, 0.25);
-  color: #c4b5fd;
+.toolbar-tab-btn.active-purple .toolbar-tab-badge {
+  background: rgba(139, 92, 246, 0.4);
+  color: #ddd6fe;
 }
 
 /* Tab Panel Fade-In Animation */
 .tab-pane {
-  animation: tabFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: tabFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes tabFadeIn {
@@ -3253,15 +3284,18 @@ a {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
-  .hub-tabs-container {
+  .main-app-toolbar {
     width: 100%;
     justify-content: flex-start;
   }
-  .hub-tab-btn {
+  .toolbar-header-pill {
+    display: none;
+  }
+  .toolbar-tab-btn {
     padding: 0.6rem 0.9rem;
     font-size: 0.85rem;
   }
-  .hub-tab-badge {
+  .toolbar-tab-badge {
     display: none;
   }
 }
