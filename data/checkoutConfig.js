@@ -1,5 +1,5 @@
 // Centralized Payment & Checkout Configuration
-// You can replace these with your actual Buy Me a Coffee, Lemon Squeezy, Shopier, or Stripe links at any time.
+// Connected to official FreeAI Engine accounts: Shopier & Buy Me a Coffee
 
 export const CHECKOUT_CONFIG = {
   // $9 Consumer Digital Toolkit: 500+ Prompts, Workflows, Student & Office Templates
@@ -7,16 +7,15 @@ export const CHECKOUT_CONFIG = {
     priceUSD: 9,
     priceTRY: 350,
     title: 'The 2026 Free AI Starter Vault',
-    // Paste your BuyMeACoffee extra link, Shopier link, or Lemon Squeezy link below:
-    checkoutUrl: process.env.NEXT_PUBLIC_VAULT_CHECKOUT_URL || '',
+    checkoutUrl: 'https://buymeacoffee.com/freeaiengine',
+    shopierUrl: 'https://www.shopier.com/freeaiengine',
   },
 
   // $3 Coffee Tip / Micro-donation to support open curation
   coffeeTip: {
     priceUSD: 3,
     title: 'Buy the Curation Team a Coffee',
-    // Paste your BuyMeACoffee profile or tip link below:
-    checkoutUrl: process.env.NEXT_PUBLIC_COFFEE_CHECKOUT_URL || '',
+    checkoutUrl: 'https://buymeacoffee.com/freeaiengine',
   },
 
   // $20 Maker Tier: Featured Tool Listing
@@ -24,7 +23,7 @@ export const CHECKOUT_CONFIG = {
     priceUSD: 20,
     priceTRY: 750,
     title: 'Featured Tool 24h Launch',
-    // Paste your Shopier or Lemon Squeezy link below:
-    checkoutUrl: process.env.NEXT_PUBLIC_FEATURED_CHECKOUT_URL || '',
+    checkoutUrl: 'https://buymeacoffee.com/freeaiengine',
+    shopierUrl: 'https://www.shopier.com/freeaiengine',
   },
 }

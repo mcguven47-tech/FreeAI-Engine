@@ -10,17 +10,19 @@ export default function StarterVault() {
   const [selectedCurrency, setSelectedCurrency] = useState('usd')
 
   const handleOpenCheckout = () => {
-    // If user has provided a real checkout URL (BuyMeACoffee, Lemon Squeezy, Shopier), redirect directly
-    if (CHECKOUT_CONFIG.starterVault.checkoutUrl) {
-      window.open(CHECKOUT_CONFIG.starterVault.checkoutUrl, '_blank')
-      return
-    }
-    // Otherwise open the embedded checkout / reservation modal
     setIsModalOpen(true)
   }
 
-  const handleSimulatedSubmit = (e) => {
+  const handleCheckoutSubmit = (e) => {
     e.preventDefault()
+    const targetUrl =
+      selectedCurrency === 'try'
+        ? CHECKOUT_CONFIG.starterVault.shopierUrl || CHECKOUT_CONFIG.starterVault.checkoutUrl
+        : CHECKOUT_CONFIG.starterVault.checkoutUrl
+
+    if (targetUrl) {
+      window.open(targetUrl, '_blank')
+    }
     setPurchased(true)
   }
 
@@ -158,7 +160,7 @@ export default function StarterVault() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSimulatedSubmit} className="modal-form">
+              <form onSubmit={handleCheckoutSubmit} className="modal-form">
                 <div className="checkout-summary-box">
                   <div className="summary-line">
                     <span>The 2026 Free AI Starter Vault (Lifetime)</span>
