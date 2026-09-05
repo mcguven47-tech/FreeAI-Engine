@@ -568,5 +568,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "speechify",
+    "name": "Speechify",
+    "category": "audio",
+    "categoryLabel": "🔊 Audio & Text-to-Speech",
+    "priceMonthly": 29,
+    "priceYearly": 139,
+    "description": "Popular AI text-to-speech reading application that charges hefty monthly subscription fees for high-quality voiceovers and document reading.",
+    "slug": "speechify-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Kokoro TTS",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "An ultra-lightweight 82M parameter text-to-speech model that delivers studio-quality, expressive voices locally without subscription fees.",
+        "url": "https://github.com/hexgrad/kokoro",
+        "pros": [
+          "Extremely natural human-like voice synthesis",
+          "Runs locally on CPU or basic GPU hardware",
+          "Permissive open-source license for personal and commercial use"
+        ],
+        "cons": [
+          "Requires basic CLI or WebUI setup"
+        ]
+      },
+      {
+        "name": "edge-tts",
+        "badge": "100% Free",
+        "type": "free",
+        "description": "A Python package and command-line utility that unlocks Microsoft Edge's neural text-to-speech voices for free without API keys.",
+        "url": "https://github.com/rany2/edge-tts",
+        "pros": [
+          "Zero GPU hardware requirements",
+          "Massive library of high-quality multilingual neural voices",
+          "Fast generation speed via cloud service"
+        ],
+        "cons": [
+          "Requires active internet connection"
+        ]
+      },
+      {
+        "name": "Piper TTS",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "A fast, privacy-focused neural text-to-speech engine optimized for offline use on low-power devices and personal computers.",
+        "url": "https://github.com/rhasspy/piper",
+        "pros": [
+          "100% offline with zero data tracking",
+          "Blazing fast synthesis optimized for real-time reading",
+          "Wide community support and voice model selection"
+        ],
+        "cons": [
+          "Slightly less emotionally dynamic than modern LLM-based speech models"
+        ]
+      }
+    ]
   }
 ]
