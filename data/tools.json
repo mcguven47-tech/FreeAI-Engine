@@ -625,5 +625,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "grammarly-premium",
+    "name": "Grammarly Premium",
+    "category": "writing",
+    "categoryLabel": "✍️ Writing & Editing",
+    "priceMonthly": 30,
+    "priceYearly": 144,
+    "description": "Grammarly Premium offers advanced AI writing suggestions, tone adjustments, and plagiarism checking, but its $30 monthly subscription fee is prohibitive for students, open-source developers, and privacy-conscious users.",
+    "slug": "grammarly-free-alternatives",
+    "alternatives": [
+      {
+        "name": "LanguageTool",
+        "badge": "Open Source Core",
+        "type": "open-source",
+        "description": "A powerful, privacy-first open-source grammar and style checker that supports over 30 languages and can be self-hosted locally.",
+        "url": "https://languagetool.org",
+        "pros": [
+          "100% Open-source core engine with self-hosting options",
+          "Supports over 30 languages with native browser extensions",
+          "Strict data privacy standards with no user data logging"
+        ],
+        "cons": [
+          "Free cloud tier limits text checks to 10,000 characters per submission"
+        ]
+      },
+      {
+        "name": "Harper",
+        "badge": "100% Free & Open Source",
+        "type": "open-source",
+        "description": "An ultra-fast, local-first grammar checker built in Rust designed for developers, Markdown writers, and privacy enthusiasts.",
+        "url": "https://github.com/Automattic/harper",
+        "pros": [
+          "Runs entirely offline with zero latency",
+          "Native integrations with VS Code, Neovim, and web browsers",
+          "Zero data transmission or cloud tracking"
+        ],
+        "cons": [
+          "Fewer nuanced stylistic suggestions compared to large cloud AI models"
+        ]
+      },
+      {
+        "name": "QuillBot",
+        "badge": "Generous Freemium",
+        "type": "freemium",
+        "description": "An intuitive AI writing assistant providing full grammar checking, paraphrasing, and summarization with a robust free tier.",
+        "url": "https://quillbot.com",
+        "pros": [
+          "Includes paraphrasing and summarization alongside grammar checks",
+          "No registration required for basic grammar and spell checks",
+          "Clean, easy-to-use web editor and browser extension"
+        ],
+        "cons": [
+          "Free tier limits paraphraser to 125 words per query"
+        ]
+      }
+    ]
   }
 ]
