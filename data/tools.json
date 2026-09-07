@@ -682,5 +682,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "claude-pro",
+    "name": "Claude Pro",
+    "category": "chat",
+    "categoryLabel": "💬 Chat & Assistants",
+    "priceMonthly": 20,
+    "priceYearly": 240,
+    "description": "Anthropic's premium subscription providing high-limit access to Claude 3.5 Sonnet, advanced artifact generation, and extended context windows, popular among developers and writers for its nuanced reasoning.",
+    "slug": "claude-pro-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Llama 3.1 / 3.2 (via Groq / Ollama)",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "Meta's open-weights models run locally via Ollama or at blazing-fast speeds on Groq, matching or exceeding proprietary models in many coding and logic benchmarks.",
+        "url": "https://ollama.com",
+        "pros": [
+          "Completely free and runs locally for privacy",
+          "Exceptional coding and reasoning performance",
+          "Zero rate limits when self-hosted"
+        ],
+        "cons": [
+          "Requires decent local GPU hardware for large models"
+        ]
+      },
+      {
+        "name": "DeepSeek-V3 / R1",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "State-of-the-art open-weights reasoning and chat models that rival Claude 3.5 Sonnet and OpenAI o1 at a fraction of the cost or entirely free via open APIs and community frontends.",
+        "url": "https://github.com/deepseek-ai/DeepSeek-V3",
+        "pros": [
+          "World-class reasoning and math capabilities",
+          "Open weights available for self-hosting",
+          "Extremely affordable or free API tiers"
+        ],
+        "cons": [
+          "High demand can occasionally cause API congestion"
+        ]
+      },
+      {
+        "name": "DuckDuckGo AI Chat",
+        "badge": "100% Free",
+        "type": "free",
+        "description": "A privacy-first interface provided by DuckDuckGo that lets users chat with leading models like Claude 3 Haiku, Llama 3, and Mixtral completely free and anonymously.",
+        "url": "https://duckduckgo.com/chat",
+        "pros": [
+          "No registration or account required",
+          "Strong privacy guarantees with zero data logging",
+          "Access to multiple top-tier models in one place"
+        ],
+        "cons": [
+          "Daily usage caps apply to manage free capacity"
+        ]
+      }
+    ]
   }
 ]
