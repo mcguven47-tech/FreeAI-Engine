@@ -739,5 +739,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "github-copilot",
+    "name": "GitHub Copilot",
+    "category": "code",
+    "categoryLabel": "💻 Code & Development",
+    "priceMonthly": 19,
+    "priceYearly": 228,
+    "description": "Popular AI pair programmer by GitHub and Microsoft that offers code completion and chat capabilities via a paid monthly subscription.",
+    "slug": "github-copilot-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Continue",
+        "badge": "100% Open Source",
+        "type": "open-source",
+        "description": "An open-source AI code assistant for VS Code and JetBrains that easily connects local models like Ollama or any custom API.",
+        "url": "https://github.com/continuedev/continue",
+        "pros": [
+          "Runs completely offline with local LLMs via Ollama",
+          "Full control over private source code and telemetry",
+          "Supports custom codebase context retrieval"
+        ],
+        "cons": [
+          "Requires local setup and hardware capability for self-hosted models"
+        ]
+      },
+      {
+        "name": "Codeium",
+        "badge": "Free for Individuals",
+        "type": "freemium",
+        "description": "An ultra-fast AI completion engine that provides free, unlimited autocomplete for individual developers across 70+ programming languages.",
+        "url": "https://codeium.com",
+        "pros": [
+          "Generous free tier with no usage caps for individuals",
+          "Integrates with over 40+ popular IDEs",
+          "Blazing fast low-latency inline code completions"
+        ],
+        "cons": [
+          "Proprietary backend server model for the cloud tier"
+        ]
+      },
+      {
+        "name": "Tabby",
+        "badge": "100% Open Source",
+        "type": "open-source",
+        "description": "A self-hosted open-source AI coding assistant that serves as a direct, independent alternative to GitHub Copilot.",
+        "url": "https://github.com/tabbyproject/tabby",
+        "pros": [
+          "Self-hostable on Docker or local Kubernetes",
+          "Built-in codebase indexing for contextual completions",
+          "No third-party data collection or tracking"
+        ],
+        "cons": [
+          "Requires dedicated GPU resources for optimal latency"
+        ]
+      }
+    ]
   }
 ]
