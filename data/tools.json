@@ -856,5 +856,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "synthesia",
+    "name": "Synthesia",
+    "category": "video",
+    "categoryLabel": "🎥 Video Generation",
+    "priceMonthly": 22,
+    "priceYearly": 264,
+    "description": "Synthesia is a leading AI video generation tool that creates digital avatar videos from text prompts, but charges steep monthly subscriptions with strict minute caps.",
+    "slug": "synthesia-free-alternatives",
+    "alternatives": [
+      {
+        "name": "LivePortrait",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "An advanced open-source portrait animation framework that drives static character images using video or audio cues with photorealistic accuracy.",
+        "url": "https://github.com/KwaiVGI/LivePortrait",
+        "pros": [
+          "Photorealistic facial animation with fine control over eye and head motion",
+          "Fast local execution with low GPU memory consumption",
+          "100% free with unlimited local video generation"
+        ],
+        "cons": [
+          "Requires local installation or running via Google Colab / Hugging Face Spaces"
+        ]
+      },
+      {
+        "name": "SadTalker",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "Generates expressive 3D motion coefficients from audio to animate static portraits into realistic avatar video presentations.",
+        "url": "https://github.com/OpenTalker/SadTalker",
+        "pros": [
+          "Synchronizes talking portraits directly with any input audio file",
+          "Integrates seamlessly with Automatic1111 and Stable Diffusion WebUI",
+          "Completely open-source with no commercial subscription fees"
+        ],
+        "cons": [
+          "Interface requires initial Python or WebUI technical setup"
+        ]
+      },
+      {
+        "name": "Hedra",
+        "badge": "Freemium",
+        "type": "freemium",
+        "description": "A web-based AI creation engine (Character-1) that generates highly expressive talking characters and video avatars from text or audio.",
+        "url": "https://www.hedra.com",
+        "pros": [
+          "No installation required with an easy web UI",
+          "Delivers fluid body and face animations with emotional expression",
+          "Provides daily free generation credits for casual creators"
+        ],
+        "cons": [
+          "Free tier limits generation length and queue priority"
+        ]
+      }
+    ]
   }
 ]
