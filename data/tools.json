@@ -913,5 +913,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "adobe-firefly",
+    "name": "Adobe Firefly (Creative Cloud Pro)",
+    "category": "image",
+    "categoryLabel": "🎨 Image & Art",
+    "priceMonthly": 52,
+    "priceYearly": 600,
+    "description": "Adobe's enterprise-grade generative AI suite integrated into Photoshop and Illustrator, notorious for high monthly subscription costs tied to the full Creative Cloud ecosystem.",
+    "slug": "adobe-firefly-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Stable Diffusion XL (SDXL) via Fooocus",
+        "badge": "100% Free & Open Source",
+        "type": "open-source",
+        "description": "An incredible open-source image generation engine that combines the best of Stable Diffusion and Midjourney in a completely free, local software interface.",
+        "url": "https://github.com/lllyasviel/Fooocus",
+        "pros": [
+          "Runs 100% locally on your own GPU with zero subscription fees",
+          "Extremely user-friendly interface inspired by Midjourney",
+          "Supports advanced features like inpainting, outpainting, and image prompts"
+        ],
+        "cons": [
+          "Requires a dedicated computer with a capable NVIDIA or AMD GPU"
+        ]
+      },
+      {
+        "name": "Krita (with AI Plugins)",
+        "badge": "100% Free & Open Source",
+        "type": "open-source",
+        "description": "A professional-grade free and open-source painting program that supports community plugins for real-time local AI generation, serving as a direct free alternative to Photoshop + Firefly.",
+        "url": "https://krita.org/",
+        "pros": [
+          "Completely free and open-source digital painting powerhouse",
+          "Integrates seamlessly with local stable diffusion backends",
+          "No usage caps, censorship filters, or cloud dependencies"
+        ],
+        "cons": [
+          "Setting up local AI backends inside Krita requires minor technical configuration"
+        ]
+      },
+      {
+        "name": "Leonardo.ai",
+        "badge": "Freemium",
+        "type": "freemium",
+        "description": "A powerful web-based generative AI platform that offers a generous daily free tier with professional control over image generation, texture generation, and canvas editing.",
+        "url": "https://leonardo.ai/",
+        "pros": [
+          "Generous daily free token allowance (150 tokens/day)",
+          "Advanced fine-tuned models for specific art styles and game assets",
+          "Built-in canvas tools similar to Photoshop's generative fill"
+        ],
+        "cons": [
+          "Generations are public on the free tier unless you subscribe"
+        ]
+      }
+    ]
   }
 ]
