@@ -970,5 +970,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "otter-ai",
+    "name": "Otter.ai",
+    "category": "audio",
+    "categoryLabel": "🎙️ Audio & Transcription",
+    "priceMonthly": 17,
+    "priceYearly": 204,
+    "description": "Otter.ai charges recurring subscription fees for AI meeting transcription, automated notes, and speaker identification, while enforcing strict duration limits on its free plan.",
+    "slug": "otter-ai-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Buzz",
+        "badge": "100% Free & Open Source",
+        "type": "open-source",
+        "description": "An intuitive offline desktop application powered by OpenAI's Whisper model that transcribes and translates audio in real time or from recorded files directly on your machine.",
+        "url": "https://github.com/chkhour/buzz",
+        "pros": [
+          "Runs entirely locally with zero cloud subscription fees or privacy risks",
+          "Supports real-time live microphone transcription and file imports",
+          "Leverages high-accuracy OpenAI Whisper models with multi-language support"
+        ],
+        "cons": [
+          "Requires local GPU hardware for faster-than-realtime transcription speed"
+        ]
+      },
+      {
+        "name": "WhisperX",
+        "badge": "100% Open Source",
+        "type": "open-source",
+        "description": "An advanced open-source speech recognition toolkit that adds rapid batch processing, word-level timestamp alignment, and automated speaker diarization (speaker identification) to Whisper.",
+        "url": "https://github.com/m-bain/whisperX",
+        "pros": [
+          "Accurate speaker diarization (who spoke when) built right in",
+          "Extremely fast transcription speed using VAD pre-filtering and batched inference",
+          "Generates precise word-level timestamps suitable for subtitles and meeting logs"
+        ],
+        "cons": [
+          "Requires command-line operation or Python integration"
+        ]
+      },
+      {
+        "name": "MacWhisper",
+        "badge": "Freemium",
+        "type": "freemium",
+        "description": "A polished macOS application that uses local Whisper AI models to convert speech into text quickly without sending data to external cloud servers.",
+        "url": "https://goodsnooze.gumroad.com/l/macwhisper",
+        "pros": [
+          "Native, user-friendly UI with simple drag-and-drop audio processing",
+          "Free version has no strict audio duration caps or monthly limits",
+          "Keeps sensitive meeting audio completely private on your local Mac"
+        ],
+        "cons": [
+          "macOS only; access to larger high-accuracy models requires a paid license upgrade"
+        ]
+      }
+    ]
   }
 ]
