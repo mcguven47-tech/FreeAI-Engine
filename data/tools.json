@@ -1027,5 +1027,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "descript",
+    "name": "Descript",
+    "category": "video",
+    "categoryLabel": "🎬 Video & Audio Editing",
+    "priceMonthly": 30,
+    "priceYearly": 288,
+    "description": "Descript revolutionized media creation with text-based audio and video editing, studio sound enhancement, and AI voice cloning, but costs up to $30/month per user with restrictive transcription hour limits.",
+    "slug": "descript-free-alternatives",
+    "alternatives": [
+      {
+        "name": "CapCut",
+        "badge": "Freemium",
+        "type": "freemium",
+        "description": "CapCut provides powerful automated AI transcriptions, automatic subtitle generation, text-to-speech, and background removal without expensive subscriptions.",
+        "url": "https://www.capcut.com",
+        "pros": [
+          "Highly accurate automatic multi-language AI captions",
+          "Rich library of video templates, effects, and text animations",
+          "Available on desktop, web browser, and mobile devices"
+        ],
+        "cons": [
+          "Some advanced AI features and cloud storage require Pro tier"
+        ]
+      },
+      {
+        "name": "Audacity with OpenVINO AI",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "The open-source standard for audio editing now supports local AI plugins powered by OpenVINO for offline transcription, noise suppression, and stem separation.",
+        "url": "https://www.audacityteam.org",
+        "pros": [
+          "100% free, open-source, and runs completely offline",
+          "Local AI transcription using OpenAI Whisper integration",
+          "Advanced audio stem separation and background noise removal"
+        ],
+        "cons": [
+          "Audio focused; requires pairing with a video editor like Kdenlive for video projects"
+        ]
+      },
+      {
+        "name": "Kdenlive",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "A feature-rich open-source video editor equipped with built-in speech-to-text engine integration powered by OpenAI Whisper.",
+        "url": "https://kdenlive.org",
+        "pros": [
+          "Full non-linear video editor with zero usage limits or subscriptions",
+          "Integrated Whisper speech-to-text for automatic video subtitles",
+          "Active open-source community and cross-platform support"
+        ],
+        "cons": [
+          "Steeper learning curve for users migrating from simplified editors"
+        ]
+      }
+    ]
   }
 ]
