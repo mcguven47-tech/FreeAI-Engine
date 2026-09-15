@@ -1141,5 +1141,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "leonardo-ai",
+    "name": "Leonardo AI",
+    "category": "image",
+    "categoryLabel": "🎨 Image & Art",
+    "priceMonthly": 12,
+    "priceYearly": 120,
+    "description": "Popular AI media generator tailored for digital art and gaming assets, but caps fast generations, upscaling, and custom fine-tuning behind paid monthly tiers.",
+    "slug": "leonardo-ai-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Fooocus",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "An offline open-source image generator that pairs a streamlined user experience with advanced Stable Diffusion SDXL and Flux rendering pipelines.",
+        "url": "https://github.com/lllyasviel/Fooocus",
+        "pros": [
+          "Automatic prompt expansion engine for high quality outputs",
+          "Runs completely locally with zero usage caps or subscription fees",
+          "Built-in face restoration, canvas expanding, and inpainting features"
+        ],
+        "cons": [
+          "Requires a computer with a dedicated NVIDIA or AMD GPU"
+        ]
+      },
+      {
+        "name": "ComfyUI",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "The industry-standard node-based visual interface for local generative AI pipelines, supporting Flux, Stable Diffusion, and custom LoRA models.",
+        "url": "https://github.com/comfyanonymous/ComfyUI",
+        "pros": [
+          "Unmatched control over complex image generation pipelines",
+          "Optimized memory management for lower-VRAM graphics cards",
+          "Massive library of community nodes and custom canvas workflows"
+        ],
+        "cons": [
+          "Steep initial learning curve for beginners using node graphs"
+        ]
+      },
+      {
+        "name": "Krita + AI Diffusion",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "Transforms the free digital illustration software Krita into a real-time AI canvas with live painting generation and layer-aware inpainting.",
+        "url": "https://github.com/Acly/krita-ai-diffusion",
+        "pros": [
+          "Live image generation that updates instantly as you paint or sketch",
+          "Seamless integration with professional brush and mask tools",
+          "Can run fully offline or connect to free remote GPU backends"
+        ],
+        "cons": [
+          "Requires manual installation of Krita software and plugin files"
+        ]
+      }
+    ]
   }
 ]
