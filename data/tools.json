@@ -1198,5 +1198,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "pika-free-alternatives",
+    "name": "Pika",
+    "category": "video",
+    "categoryLabel": "🎬 Video Generation",
+    "priceMonthly": 28,
+    "priceYearly": 288,
+    "description": "Pika is a popular generative AI video platform that creates high-quality motion clips, lip-syncing, and video edits from text or image prompts. Its best features and high resolutions are locked behind expensive monthly subscriptions.",
+    "slug": "pika-free-alternatives",
+    "alternatives": [
+      {
+        "name": "CogVideoX",
+        "badge": "100% Open Source",
+        "type": "open-source",
+        "description": "A state-of-the-art open-source text-to-video diffusion model that produces coherent high-resolution video clips locally or on free cloud environments like Google Colab.",
+        "url": "https://github.com/THUDM/CogVideo",
+        "pros": [
+          "Completely open weights and code with no generation limits",
+          "High prompt adherence and fluid visual motion",
+          "Can be run locally or via Hugging Face Spaces"
+        ],
+        "cons": [
+          "Requires a dedicated local GPU with at least 12GB VRAM"
+        ]
+      },
+      {
+        "name": "ComfyUI + AnimateDiff",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "A powerful node-based open-source workflow framework that combines Stable Diffusion with AnimateDiff to produce custom video animations without subscription costs.",
+        "url": "https://github.com/comfyanonymous/ComfyUI",
+        "pros": [
+          "Total fine-grained control over motion, camera movements, and frames",
+          "Vast community library of custom nodes and workflows",
+          "Zero recurring costs or credit limits"
+        ],
+        "cons": [
+          "Steep learning curve due to node-based interface"
+        ]
+      },
+      {
+        "name": "Stable Video Diffusion (SVD)",
+        "badge": "100% Open Source",
+        "type": "open-source",
+        "description": "Stability AI's open foundation model designed for high-quality image-to-video generation, perfect for animating still artwork and photos.",
+        "url": "https://github.com/Stability-AI/generative-models",
+        "pros": [
+          "Excellent motion realism from still image inputs",
+          "Integrates directly into popular local WebUIs like AUTOMATIC1111",
+          "Free for research and non-commercial personal use"
+        ],
+        "cons": [
+          "Generates short clip durations (2 to 4 seconds) per generation"
+        ]
+      }
+    ]
   }
 ]
