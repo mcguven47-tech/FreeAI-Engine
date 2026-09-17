@@ -1255,5 +1255,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "copy-ai",
+    "name": "Copy.ai",
+    "category": "writing",
+    "categoryLabel": "✍️ Writing & Content",
+    "priceMonthly": 49,
+    "priceYearly": 432,
+    "description": "Copy.ai is a leading AI copywriter and marketing platform, but its advanced GTM workflows and team seats come at a steep $49/month price tag.",
+    "slug": "copy-ai-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Ollama + Open WebUI",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "Run state-of-the-art open-source LLMs locally with a modern ChatGPT-like interface without subscription fees or data tracking.",
+        "url": "https://github.com/open-webui/open-webui",
+        "pros": [
+          "100% private and runs fully offline",
+          "Zero word generation limits or recurring fees",
+          "Supports powerful models like Llama 3.1, Gemma 2, and Qwen 2.5"
+        ],
+        "cons": [
+          "Requires local setup and decent GPU/RAM hardware"
+        ]
+      },
+      {
+        "name": "HuggingChat",
+        "badge": "100% Free",
+        "type": "free",
+        "description": "An open source, browser-based chat assistant powered by Hugging Face with web search capabilities and customizable assistants.",
+        "url": "https://huggingface.co/chat",
+        "pros": [
+          "Completely free with no credit card required",
+          "Built-in web browsing and document parsing",
+          "Access to top open-source models out of the box"
+        ],
+        "cons": [
+          "May experience rate limits during peak global usage"
+        ]
+      },
+      {
+        "name": "TextCortex AI",
+        "badge": "Freemium",
+        "type": "freemium",
+        "description": "A customizable AI writing copilot offering browser extensions and specialized templates tailored for marketing and copywriting.",
+        "url": "https://textcortex.com",
+        "pros": [
+          "Daily free credits that automatically refresh",
+          "Browser extension works across all text fields on the web",
+          "Rich template library for emails, blog posts, and ad copy"
+        ],
+        "cons": [
+          "Free tier limits the number of daily generations"
+        ]
+      }
+    ]
   }
 ]
