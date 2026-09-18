@@ -1312,5 +1312,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "invideo-ai",
+    "name": "InVideo AI",
+    "category": "video",
+    "categoryLabel": "🎥 AI Video Generator",
+    "priceMonthly": 25,
+    "priceYearly": 240,
+    "description": "InVideo AI creates complete, narrated videos with stock footage from text prompts, but charges steep monthly subscriptions for HD exports, stock asset licenses, and generation credits.",
+    "slug": "invideo-ai-free-alternatives",
+    "alternatives": [
+      {
+        "name": "CapCut",
+        "badge": "Freemium",
+        "type": "freemium",
+        "description": "Offers robust AI Script-to-Video generation, automated captions, text-to-speech, and rich templates with zero upfront cost.",
+        "url": "https://www.capcut.com",
+        "pros": [
+          "Powerful script-to-video AI generator included for free",
+          "Auto-captioning and AI voice synthesis with realistic voices",
+          "Full multi-track timeline editing capabilities"
+        ],
+        "cons": [
+          "Some premium effects and high-tier cloud storage require CapCut Pro"
+        ]
+      },
+      {
+        "name": "MoneyPrinter",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "An open-source Python tool that fully automates short-video creation using local LLMs, free stock footage APIs, and voice synthesis.",
+        "url": "https://github.com/FujiwaraChoki/MoneyPrinter",
+        "pros": [
+          "100% free and open-source with zero generation limits",
+          "Automates scriptwriting, stock clip matching, voiceover, and captions",
+          "Runs locally or with free API keys"
+        ],
+        "cons": [
+          "Requires basic Python knowledge and API setup"
+        ]
+      },
+      {
+        "name": "ShortGPT",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "An experimental framework automating video production pipeline, script generation, audio synthesis, and captioning with a web UI.",
+        "url": "https://github.com/Ray2C/ShortGPT",
+        "pros": [
+          "Includes a Gradio web interface for user-friendly operation",
+          "Automates video editing, narration, and background soundtracking",
+          "Supports multilingual video generation"
+        ],
+        "cons": [
+          "Requires local installation and initial configuration"
+        ]
+      }
+    ]
   }
 ]
