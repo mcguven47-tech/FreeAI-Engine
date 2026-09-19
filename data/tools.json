@@ -1369,5 +1369,64 @@
         ]
       }
     ]
+  },
+  {
+    "id": "gemini-advanced",
+    "name": "Google Gemini Advanced",
+    "category": "chat",
+    "categoryLabel": "💬 Chat & LLM",
+    "priceMonthly": 20,
+    "priceYearly": 240,
+    "description": "Google's flagship AI subscription offering multimodal reasoning, deep Workspace integration, and a massive 1-2 million token context window, locked behind a $20/month paywall.",
+    "slug": "gemini-advanced-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Groq API & Chat",
+        "badge": "100% Free Tier",
+        "type": "free",
+        "description": "Lightning-fast inference using open-source models like Llama 3 on proprietary LPU hardware, completely free for developer and consumer usage within generous rate limits.",
+        "url": "https://console.groq.com",
+        "pros": [
+          "Incredible response speed",
+          "Access to top open-source models",
+          "Generous free tier API limits"
+        ],
+        "cons": [
+          "Smaller context window than Gemini",
+          "Cloud-dependent"
+        ]
+      },
+      {
+        "name": "Ollama (Llama 3 / Mistral)",
+        "badge": "100% Free & Open Source",
+        "type": "open-source",
+        "description": "Run state-of-the-art open-source LLMs locally on your own hardware with zero data privacy concerns and no subscription fees.",
+        "url": "https://ollama.com",
+        "pros": [
+          "100% private and offline",
+          "No rate limits or costs",
+          "Supports dozens of frontier open models"
+        ],
+        "cons": [
+          "Requires capable local hardware (GPU/RAM)"
+        ]
+      },
+      {
+        "name": "DuckDuckGo AI Chat",
+        "badge": "100% Free",
+        "type": "free",
+        "description": "A completely free, anonymous privacy-first gateway to multiple leading open-source models including Llama 3 and Mistral.",
+        "url": "https://duckduckgo.com/chat",
+        "pros": [
+          "No sign-up or account required",
+          "Strong privacy protections",
+          "Switch between multiple models"
+        ],
+        "cons": [
+          "Basic interface without advanced file uploads",
+          "Session history is ephemeral"
+        ]
+      }
+    ]
   }
 ]
