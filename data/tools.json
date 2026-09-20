@@ -1428,5 +1428,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "murf-ai",
+    "name": "Murf AI",
+    "category": "audio",
+    "categoryLabel": "🎙️ Audio & Voice",
+    "priceMonthly": 29,
+    "priceYearly": 276,
+    "description": "Murf AI is a popular voice generation and AI voiceover studio, but its expensive monthly subscriptions and strict voice-generation character limits quickly restrict creators.",
+    "slug": "murf-ai-free-alternatives",
+    "alternatives": [
+      {
+        "name": "XTTS v2 (Coqui TTS)",
+        "badge": "Open Source",
+        "type": "open-source",
+        "description": "An advanced open-source neural text-to-speech engine capable of cloning voices in 17+ languages using just a 3-second audio sample.",
+        "url": "https://github.com/coqui-ai/TTS",
+        "pros": [
+          "Zero subscription fees or word count limits",
+          "Instant cross-lingual voice cloning",
+          "Runs fully offline on consumer GPUs"
+        ],
+        "cons": [
+          "Requires basic command-line or GUI setup"
+        ]
+      },
+      {
+        "name": "Piper TTS",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "A lightweight, fast, local neural text-to-speech system optimized to run smoothly even on low-power devices like a Raspberry Pi.",
+        "url": "https://github.com/rhasspy/piper",
+        "pros": [
+          "Ultra-fast CPU synthesis speed",
+          "Wide selection of natural pre-trained voices",
+          "Complete offline privacy with zero telemetry"
+        ],
+        "cons": [
+          "Fewer expressive speech controls compared to cloud models"
+        ]
+      },
+      {
+        "name": "Fish Speech",
+        "badge": "Open Source",
+        "type": "open-source",
+        "description": "A state-of-the-art open-source zero-shot voice cloning and TTS model designed for highly natural human speech generation.",
+        "url": "https://github.com/fishaudio/fish-speech",
+        "pros": [
+          "High-fidelity human-like tone and emotional cadence",
+          "Zero-shot cloning capability",
+          "Permissive open license and active community development"
+        ],
+        "cons": [
+          "Requires a modern GPU with at least 8GB VRAM for local installation"
+        ]
+      }
+    ]
   }
 ]
