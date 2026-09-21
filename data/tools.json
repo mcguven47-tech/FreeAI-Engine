@@ -1485,5 +1485,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "notion-ai",
+    "name": "Notion AI",
+    "category": "writing",
+    "categoryLabel": "📝 Writing & Productivity",
+    "priceMonthly": 20,
+    "priceYearly": 240,
+    "description": "An add-on assistant integrated into Notion that charges per user per month for content generation, Q&A across workspace docs, and automatic summaries.",
+    "slug": "notion-ai-free-alternatives",
+    "alternatives": [
+      {
+        "name": "AppFlowy",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "A privacy-first, open-source workspace alternative to Notion that brings native AI capabilities using local Ollama models or your own custom API keys.",
+        "url": "https://github.com/AppFlowy-IO/AppFlowy",
+        "pros": [
+          "100% open-source and data privacy compliant",
+          "Supports local LLMs via Ollama for offline AI access",
+          "Fast desktop performance built on Flutter and Rust"
+        ],
+        "cons": [
+          "Fewer built-in third-party app integrations than Notion"
+        ]
+      },
+      {
+        "name": "Obsidian + Smart Connections",
+        "badge": "100% Free",
+        "type": "free",
+        "description": "A powerful local Markdown knowledge base that transforms into an advanced AI workspace when paired with open-source community AI plugins.",
+        "url": "https://obsidian.md",
+        "pros": [
+          "Complete ownership of plain-text Markdown files on your local drive",
+          "Vector-search embedding across all notes without cloud subscription costs",
+          "Massive open-source plugin ecosystem for tailored workflows"
+        ],
+        "cons": [
+          "Requires manual initial setup and plugin configuration"
+        ]
+      },
+      {
+        "name": "Logseq",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "An open-source, privacy-focused knowledge management platform with local graph database features and extensible AI plugins for semantic searching and writing.",
+        "url": "https://github.com/logseq/logseq",
+        "pros": [
+          "Privacy-first architecture running entirely offline",
+          "Powerful bi-directional linking and automated task management",
+          "Active community developing localized AI summarization tools"
+        ],
+        "cons": [
+          "Outliner style interface has a steeper learning curve for standard document writers"
+        ]
+      }
+    ]
   }
 ]
