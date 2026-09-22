@@ -1542,5 +1542,67 @@
         ]
       }
     ]
+  },
+  {
+    "id": "kling-ai",
+    "name": "Kling AI",
+    "category": "video",
+    "categoryLabel": "🎬 Video Generation",
+    "priceMonthly": 35,
+    "priceYearly": 330,
+    "description": "A high-end cinematic video generation model known for hyper-realistic physics and long generation durations, locking advanced features behind costly subscription tiers.",
+    "slug": "kling-ai-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Stable Video Diffusion (SVD)",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "Stability AI's open-source foundational model for generative video, capable of running locally on consumer hardware.",
+        "url": "https://github.com/Stability-AI/generative-models",
+        "pros": [
+          "Completely open-source and free to run locally",
+          "No usage limits, censorship, or cloud subscription",
+          "Active community fine-tunes and extensions"
+        ],
+        "cons": [
+          "Requires powerful GPU with high VRAM",
+          "Shorter native video generation length",
+          "Requires local setup and technical knowledge"
+        ]
+      },
+      {
+        "name": "AnimateDiff",
+        "badge": "Open Source",
+        "type": "open-source",
+        "description": "An open-source motion module for Stable Diffusion that brings life and fluid motion to static images without training custom models.",
+        "url": "https://github.com/guoyww/AnimateDiff",
+        "pros": [
+          "Integrates seamlessly with existing Stable Diffusion workflows",
+          "Incredible stylistic control via community checkpoints",
+          "Completely free self-hosted execution"
+        ],
+        "cons": [
+          "Steep learning curve using Automatic1111 or ComfyUI",
+          "Requires dedicated local hardware"
+        ]
+      },
+      {
+        "name": "Luma Dream Machine",
+        "badge": "Freemium",
+        "type": "freemium",
+        "description": "A powerful cinematic AI video generator offering generous free daily generations with stunning camera movements and realism.",
+        "url": "https://lumalabs.ai/dream-machine",
+        "pros": [
+          "High-fidelity cinematic outputs rivaling paid tools",
+          "Generous free tier with daily generation credits",
+          "Easy-to-use web interface requiring no setup"
+        ],
+        "cons": [
+          "Generations can have a queue during peak hours",
+          "Watermarks on free tier exports",
+          "Proprietary cloud-locked model"
+        ]
+      }
+    ]
   }
 ]
