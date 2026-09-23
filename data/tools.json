@@ -1604,5 +1604,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "replit-core",
+    "name": "Replit Core & Replit Agent",
+    "category": "code",
+    "categoryLabel": "💻 Code & Dev",
+    "priceMonthly": 20,
+    "priceYearly": 240,
+    "description": "Replit offers cloud-based coding workspaces and autonomous AI software agents, but monthly subscription costs scale up quickly for developers.",
+    "slug": "replit-core-free-alternatives",
+    "alternatives": [
+      {
+        "name": "OpenHands",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "An open-source autonomous AI developer capable of running terminal commands, editing files, and browsing the web in isolated Docker environments.",
+        "url": "https://github.com/All-Hands-AI/OpenHands",
+        "pros": [
+          "Fully autonomous agent workflow running in local Docker sandboxes",
+          "Compatible with local LLMs (Ollama) or custom API endpoints",
+          "100% free and open-source with community-driven development"
+        ],
+        "cons": [
+          "Requires Docker setup and local system resources"
+        ]
+      },
+      {
+        "name": "Aider",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "A high-performing CLI AI pair programmer that edits code in your local repository and automatically creates git commits.",
+        "url": "https://github.com/paul-gauthier/aider",
+        "pros": [
+          "Top-ranked performance on SWE-bench benchmarks",
+          "Direct integration with Git repositories and local models",
+          "Zero subscription fees or vendor lock-in"
+        ],
+        "cons": [
+          "Command-line interface only, lacking a visual web editor"
+        ]
+      },
+      {
+        "name": "Continue.dev",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "The open-source AI code assistant extension for VS Code and JetBrains that brings custom tab autocomplete and chat into your editor.",
+        "url": "https://github.com/continuedev/continue",
+        "pros": [
+          "Native extension for popular IDEs like VS Code and JetBrains",
+          "Complete control over LLM backends and data privacy",
+          "Supports full codebase indexing and context awareness"
+        ],
+        "cons": [
+          "Requires configuring your own LLM API keys or local server"
+        ]
+      }
+    ]
   }
 ]
