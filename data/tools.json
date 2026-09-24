@@ -1661,5 +1661,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "devin-ai",
+    "name": "Devin AI",
+    "category": "code",
+    "categoryLabel": "💻 Code & Development",
+    "priceMonthly": 500,
+    "priceYearly": 6000,
+    "description": "Devin by Cognition AI is an autonomous AI software engineer capable of planning, coding, and debugging entire projects, but access starts at a hefty $500/month for agent compute credits.",
+    "slug": "devin-ai-free-alternatives",
+    "alternatives": [
+      {
+        "name": "OpenHands",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "Formerly known as OpenDevin, OpenHands is a community-driven autonomous AI software engineer capable of writing code, running terminal commands, and browsing the web.",
+        "url": "https://github.com/All-Hands-AI/OpenHands",
+        "pros": [
+          "Can run locally using Ollama or with cheap open-router API keys",
+          "Executes code safely in isolated Docker containers",
+          "Active open-source community with frequent feature updates"
+        ],
+        "cons": [
+          "Requires Docker setup and basic technical knowledge to run"
+        ]
+      },
+      {
+        "name": "Devika",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "Devika is an open-source AI software engineer that translates high-level human instructions into actionable steps, researches requirements, and writes full codebases.",
+        "url": "https://github.com/stitionai/devika",
+        "pros": [
+          "Clean, web-based graphical interface with progress tracking",
+          "Integrates seamlessly with local LLMs and major API providers",
+          "100% free and open-source under the MIT license"
+        ],
+        "cons": [
+          "Performance depends heavily on the underlying LLM selected"
+        ]
+      },
+      {
+        "name": "SWE-agent",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "Developed by Princeton University researchers, SWE-agent configures language models to automatically fix real software bugs and issue tickets in GitHub repositories.",
+        "url": "https://github.com/princeton-nlp/SWE-agent",
+        "pros": [
+          "Top-tier performance on the SWE-bench software engineering benchmark",
+          "Highly specialized Agent-Computer Interface (ACI) for code navigation",
+          "Extremely flexible and customizable agent workflows"
+        ],
+        "cons": [
+          "Terminal-heavy workflow without a rich graphical user interface"
+        ]
+      }
+    ]
   }
 ]
