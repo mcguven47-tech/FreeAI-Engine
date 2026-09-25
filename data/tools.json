@@ -1718,5 +1718,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "d-id",
+    "name": "D-ID Creative Reality Studio",
+    "category": "video",
+    "categoryLabel": "🎬 Video & Avatars",
+    "priceMonthly": 18,
+    "priceYearly": 192,
+    "description": "D-ID generates photorealistic AI talking avatar videos from text or audio, but its restrictive credit-based pricing model gets extremely expensive for high-volume content creators.",
+    "slug": "d-id-free-alternatives",
+    "alternatives": [
+      {
+        "name": "LivePortrait",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "An exceptional open-source neural video rendering model that animates static portrait photos with hyper-realistic facial motion, eye gaze, and lip sync.",
+        "url": "https://github.com/KwaiVGI/LivePortrait",
+        "pros": [
+          "Runs completely free on local GPU or cloud spaces",
+          "Remarkably natural micro-expressions and head movement",
+          "No watermarks, credit limits, or privacy concerns"
+        ],
+        "cons": [
+          "Requires local installation or running via Hugging Face web UI"
+        ]
+      },
+      {
+        "name": "SadTalker",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "A popular open-source algorithm that generates realistic talking head videos driven by audio clips and a single portrait picture.",
+        "url": "https://github.com/OpenTalker/SadTalker",
+        "pros": [
+          "3D motion-coefficient driven animation for high realism",
+          "Integrates as an extension for Stable Diffusion WebUI",
+          "Unlimited generation length without subscription fees"
+        ],
+        "cons": [
+          "Processing time depends heavily on your hardware performance"
+        ]
+      },
+      {
+        "name": "Hedra (Character-1)",
+        "badge": "Freemium",
+        "type": "freemium",
+        "description": "A state-of-the-art AI video foundation model capable of driving expressive portrait and character animations from text and audio inputs in seconds.",
+        "url": "https://www.hedra.com",
+        "pros": [
+          "Handles stylized artwork as effectively as realistic portraits",
+          "Fast web interface with no local hardware requirements",
+          "Generous daily free credits for lightweight creators"
+        ],
+        "cons": [
+          "Free tier limits maximum video resolution and length"
+        ]
+      }
+    ]
   }
 ]
