@@ -1775,5 +1775,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "topaz-video-ai",
+    "name": "Topaz Video AI",
+    "category": "video",
+    "categoryLabel": "🎬 Video Production",
+    "priceMonthly": 25,
+    "priceYearly": 299,
+    "description": "Topaz Video AI is an industry-standard desktop software for AI video upscaling, frame interpolation, and motion deblurring, but its $299 price tag is prohibitively expensive for casual creators.",
+    "slug": "topaz-video-ai-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Video2X",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "A powerful open-source video upscaler and frame interpolator utilizing state-of-the-art algorithms like Real-CUGAN, Waifu2x, and RIFE.",
+        "url": "https://github.com/k4yt3x/video2x",
+        "pros": [
+          "100% free and open-source with no watermarks",
+          "Supports hardware acceleration on NVIDIA, AMD, and Intel GPUs",
+          "Bundles top-tier AI upscaling models (Real-ESRGAN, RIFE, Waifu2x)"
+        ],
+        "cons": [
+          "Requires local GPU hardware and initial command-line or GUI setup"
+        ]
+      },
+      {
+        "name": "Waifu2x-Extension-GUI",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "An feature-packed open-source desktop application that upscales and interpolates frames for videos, GIFs, and images using neural networks.",
+        "url": "https://github.com/AakiraS/Waifu2x-Extension-GUI",
+        "pros": [
+          "Completely free open-source software with user-friendly Windows GUI",
+          "Includes batch video processing, frame interpolation, and noise reduction",
+          "Supports modern AI models including Real-CUGAN and Anime4K"
+        ],
+        "cons": [
+          "Complex settings screen can feel overwhelming for non-technical users"
+        ]
+      },
+      {
+        "name": "CapCut",
+        "badge": "Freemium",
+        "type": "freemium",
+        "description": "A popular cross-platform editor that includes free AI video enhancement tools, frame rate boosting, and auto-captioning features.",
+        "url": "https://www.capcut.com",
+        "pros": [
+          "Zero-setup web and desktop interface suitable for quick enhancements",
+          "Free baseline video quality enhancement, stabilization, and denoising",
+          "Rich suite of built-in editing, subtitle, and effect tools"
+        ],
+        "cons": [
+          "Highest quality 4K upscaling features require a PRO subscription"
+        ]
+      }
+    ]
   }
 ]
