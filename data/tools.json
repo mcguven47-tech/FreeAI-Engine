@@ -1832,5 +1832,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "magnific-ai",
+    "name": "Magnific AI",
+    "category": "image",
+    "categoryLabel": "🎨 Image & Art",
+    "priceMonthly": 39,
+    "priceYearly": 468,
+    "description": "Magnific AI is an elite AI image upscaler and enhancer capable of hallucinating rich details into low-resolution images, but its steep $39/month starter price makes it inaccessible to many casual creators.",
+    "slug": "magnific-ai-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Upscayl",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "A cross-platform desktop application that uses AI models like Real-ESRGAN to upscale and sharpen low-resolution images locally without cloud processing limits.",
+        "url": "https://github.com/upscayl/upscayl",
+        "pros": [
+          "100% free and open-source with unlimited offline upscaling",
+          "Clean, beginner-friendly desktop UI for Windows, Mac, and Linux",
+          "Supports batch image upscaling and multiple custom AI models"
+        ],
+        "cons": [
+          "Relies on local GPU/CPU hardware capabilities for speed"
+        ]
+      },
+      {
+        "name": "ComfyUI (with SUPIR / Tile ControlNet)",
+        "badge": "Open Source / Advanced Generative Upscale",
+        "type": "open-source",
+        "description": "A powerful node-based GUI for Stable Diffusion that allows advanced creators to build custom generative upscaling workflows mirroring Magnific's exact feature set for free.",
+        "url": "https://github.com/comfyanonymous/ComfyUI",
+        "pros": [
+          "Matches or exceeds Magnific AI quality using SUPIR or CCSR models",
+          "Unlimited generation capability with no subscription fees",
+          "Complete precision control over prompt guidance and tile size"
+        ],
+        "cons": [
+          "Steep learning curve and requires a powerful dedicated GPU"
+        ]
+      },
+      {
+        "name": "Krita AI Diffusion",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "An open-source plugin for the Krita painting software that adds real-time AI generation, inpainting, and generative upscaling directly into a professional digital canvas.",
+        "url": "https://github.com/Acly/krita-ai-diffusion",
+        "pros": [
+          "Generative upscaling integrated directly into a full-featured image editor",
+          "Supports local Stable Diffusion and ComfyUI backends",
+          "Allows direct layer manipulation and targeted detail refinement"
+        ],
+        "cons": [
+          "Requires local setup of Stable Diffusion backend for offline use"
+        ]
+      }
+    ]
   }
 ]
