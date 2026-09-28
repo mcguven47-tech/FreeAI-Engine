@@ -1889,5 +1889,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "udio",
+    "name": "Udio",
+    "category": "audio",
+    "categoryLabel": "🎵 Audio & Music",
+    "priceMonthly": 30,
+    "priceYearly": 288,
+    "description": "Udio produces high-fidelity vocal and instrumental music tracks, but locks high-priority generation queues, stem separation, and commercial ownership behind recurring subscription tiers.",
+    "slug": "udio-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Audiocraft (MusicGen)",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "Meta's flagship open-source music generation architecture that runs entirely on local consumer hardware without generation quotas.",
+        "url": "https://github.com/facebookresearch/audiocraft",
+        "pros": [
+          "Unrestricted, free local execution with zero monthly subscription fees",
+          "Supports melody conditioning using humming or audio reference files",
+          "Direct export of uncompressed audio stems and complete track control"
+        ],
+        "cons": [
+          "Requires a discrete GPU with at least 8GB to 12GB of VRAM"
+        ]
+      },
+      {
+        "name": "Stable Audio Open",
+        "badge": "Open Weights",
+        "type": "open-source",
+        "description": "Stability AI's open-weights model designed specifically for generative music production, sound design, and sample creation.",
+        "url": "https://github.com/Stability-AI/stable-audio-tools",
+        "pros": [
+          "Native high-fidelity 44.1kHz stereo audio output",
+          "Transparent training dataset with clear licensing guidelines",
+          "Easily integrated into local DAWs and production workflows via Python"
+        ],
+        "cons": [
+          "Clip length capped at 47 seconds per generation step"
+        ]
+      },
+      {
+        "name": "AudioLDM 2",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "A versatile open-source latent diffusion framework capable of text-to-music, sound effect synthesis, and audio style transfer.",
+        "url": "https://github.com/haoheliu/AudioLDM2",
+        "pros": [
+          "Completely offline and private text-to-music synthesis",
+          "Accessible through Hugging Face Diffusers library with minimal setup",
+          "Handles both melodic song arrangements and ambient soundscapes"
+        ],
+        "cons": [
+          "Vocal generation lacks the commercial polish of proprietary engines"
+        ]
+      }
+    ]
   }
 ]
