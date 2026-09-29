@@ -1946,5 +1946,65 @@
         ]
       }
     ]
+  },
+  {
+    "id": "viggle-ai",
+    "name": "Viggle AI",
+    "category": "video",
+    "categoryLabel": "🎥 Video & Animation",
+    "priceMonthly": 49,
+    "priceYearly": 470,
+    "description": "Viggle AI is a leading proprietary character animation tool that allows users to composite 3D character models into real videos with physics-based movement. Its high-tier plans are very expensive for creators needing heavy compute and high-resolution renders.",
+    "slug": "viggle-ai-free-alternatives",
+    "alternatives": [
+      {
+        "name": "ComfyUI with AnimateDiff & ControlNet",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "A node-based GUI for stable diffusion workflows that excels at video-to-video generation, character consistency, and pose transfer using ControlNet OpenPose.",
+        "url": "https://github.com/comfyanonymous/ComfyUI",
+        "pros": [
+          "Completely free and runs locally or on free cloud tiers",
+          "Infinite customizability with node-based pipelines",
+          "Full data privacy with local execution"
+        ],
+        "cons": [
+          "Steep learning curve for beginners",
+          "Requires a dedicated powerful GPU"
+        ]
+      },
+      {
+        "name": "Rokoko Vision",
+        "badge": "Freemium",
+        "type": "freemium",
+        "description": "An AI-powered markerless motion capture tool that allows users to record video and extract 3D character animation directly in the browser.",
+        "url": "https://www.rokoko.com/products/rokoko-vision",
+        "pros": [
+          "Generates clean 3D skeletal movement from regular webcam footage",
+          "Exports to standard formats like FBX and USD",
+          "Generous free tier for casual creators"
+        ],
+        "cons": [
+          "Free tier includes watermarks or export limits",
+          "Requires clear lighting and proper framing"
+        ]
+      },
+      {
+        "name": "Plask Motion",
+        "badge": "Freemium",
+        "type": "freemium",
+        "description": "An AI animation and motion capture platform that extracts skeletal data from standard 2D video and maps it onto 3D models seamlessly.",
+        "url": "https://plask.ai",
+        "pros": [
+          "Browser-based solution requiring no local installation",
+          "Intuitive retargeting tools for 3D characters",
+          "Active community and helpful documentation"
+        ],
+        "cons": [
+          "Monthly subscription required for high-res exports and heavy jobs",
+          "Occasional jitter that requires manual cleanup"
+        ]
+      }
+    ]
   }
 ]
