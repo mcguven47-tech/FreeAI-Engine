@@ -2006,5 +2006,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "anthropic-claude-api-or-similar",
+    "name": "Pinecone Vector Database (Managed)",
+    "category": "chat",
+    "categoryLabel": "💬 Database & Vector Search",
+    "priceMonthly": 70,
+    "priceYearly": 840,
+    "description": "Pinecone is a fully managed, cloud-native vector database designed for high-performance AI retrieval-augmented generation (RAG) applications, but enterprise tiers scale up rapidly in cost.",
+    "slug": "pinecone-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Chroma",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "The AI-native open-source vector database designed specifically to make building LLM apps easy and fast.",
+        "url": "https://www.trychroma.com/",
+        "pros": [
+          "Runs locally in-memory or persists to disk",
+          "Python and JavaScript native bindings",
+          "Built-in embeddings support"
+        ],
+        "cons": [
+          "Requires self-hosting for massive production scale"
+        ]
+      },
+      {
+        "name": "Milvus",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "An open-source vector database built to power embedding similarity search and AI applications at any scale.",
+        "url": "https://milvus.io/",
+        "pros": [
+          "Extremely high performance at billion-scale",
+          "Distributed architecture",
+          "Cloud-native with Kubernetes support"
+        ],
+        "cons": [
+          "Complex infrastructure setup and operational overhead"
+        ]
+      },
+      {
+        "name": "Qdrant",
+        "badge": "Open-Source / Cloud Free Tier",
+        "type": "open-source",
+        "description": "Vector database and vector search engine written in Rust, providing a fast and reliable memory-safe implementation.",
+        "url": "https://qdrant.tech/",
+        "pros": [
+          "Written in Rust for blistering speed",
+          "Rich metadata filtering capabilities",
+          "Generous cloud free tier available"
+        ],
+        "cons": [
+          "Advanced distributed features require enterprise planning"
+        ]
+      }
+    ]
   }
 ]
