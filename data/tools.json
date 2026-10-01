@@ -2063,5 +2063,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "luma-dream-machine",
+    "name": "Luma Dream Machine",
+    "category": "video",
+    "categoryLabel": "🎬 Video & Motion",
+    "priceMonthly": 30,
+    "priceYearly": 360,
+    "description": "Luma Dream Machine creates realistic, high-quality AI video clips from text prompts and images, but subscription plans rapidly scale from $30 up to $500/month for generation credits.",
+    "slug": "luma-dream-machine-free-alternatives",
+    "alternatives": [
+      {
+        "name": "HunyuanVideo",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "Tencent's flagship open-source video generation model offering cinematic rendering quality, fluid motion physics, and high text-prompt accuracy.",
+        "url": "https://github.com/Tencent/HunyuanVideo",
+        "pros": [
+          "State-of-the-art open-source text-to-video visual quality",
+          "Fully open model weights and inference code",
+          "Seamless integration with popular web UIs like ComfyUI"
+        ],
+        "cons": [
+          "Requires a powerful GPU with 24GB+ VRAM for local rendering"
+        ]
+      },
+      {
+        "name": "CogVideoX",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "A powerful open-weights video model from THUDM capable of high-fidelity text-to-video and image-to-video generation on consumer hardware.",
+        "url": "https://github.com/THUDM/CogVideo",
+        "pros": [
+          "Supports both text-to-video and image-to-video generation",
+          "Optimized variants available for consumer GPU hardware",
+          "Permissive open license for research and commercial use"
+        ],
+        "cons": [
+          "Default video duration is limited without extended generation pipelines"
+        ]
+      },
+      {
+        "name": "LTX-Video",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "Lightricks' open-source real-time video generation model built for ultra-fast generation times and interactive creation workflows.",
+        "url": "https://github.com/Lightricks/LTX-Video",
+        "pros": [
+          "Blazing fast inference speeds (generates clips in seconds)",
+          "Runs smoothly on mid-range GPUs (12GB VRAM)",
+          "Fully open model weights with low memory footprint"
+        ],
+        "cons": [
+          "Slightly lower temporal detail compared to compute-heavy models"
+        ]
+      }
+    ]
   }
 ]
