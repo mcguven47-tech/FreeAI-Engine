@@ -2120,5 +2120,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "fireflies-ai",
+    "name": "Fireflies.ai",
+    "category": "audio",
+    "categoryLabel": "🎙️ Audio & Transcription",
+    "priceMonthly": 18,
+    "priceYearly": 216,
+    "description": "Fireflies.ai automatically transcribes, summarizes, and analyzes voice conversations across video conferencing platforms, but charges per-user monthly subscriptions that scale up quickly for teams.",
+    "slug": "fireflies-ai-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Fathom",
+        "badge": "Free for Individuals",
+        "type": "freemium",
+        "description": "Fathom provides free, unlimited meeting recording, real-time transcription, and automated AI summary generation for Zoom, Google Meet, and Microsoft Teams.",
+        "url": "https://fathom.video",
+        "pros": [
+          "Unlimited transcription and recording on free tier",
+          "Instant AI meeting summaries and action items",
+          "Direct integration with Slack and CRM tools"
+        ],
+        "cons": [
+          "Advanced team collaboration features require a paid plan"
+        ]
+      },
+      {
+        "name": "Screenpipe",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "An open-source, 100% local AI assistant that continuously records screen and microphone audio, letting you transcribe meetings and search your history privately.",
+        "url": "https://github.com/mediar-ai/screenpipe",
+        "pros": [
+          "Runs completely offline with local LLMs and Whisper",
+          "Full privacy with zero cloud data transmission",
+          "Captures both visual screen context and spoken audio"
+        ],
+        "cons": [
+          "Requires local hardware resources (GPU recommended)"
+        ]
+      },
+      {
+        "name": "Whisper WebUI",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "A user-friendly browser interface for OpenAI's open-source Whisper model, allowing high-accuracy offline transcription and translation without subscription costs.",
+        "url": "https://github.com/ahmetuner/whisper-webui",
+        "pros": [
+          "Zero subscription fees and no usage caps",
+          "Supports over 90 languages with top-tier accuracy",
+          "Runs locally on your machine for complete data privacy"
+        ],
+        "cons": [
+          "Does not auto-bot join live video calls (requires file upload)"
+        ]
+      }
+    ]
   }
 ]
