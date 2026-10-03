@@ -2177,5 +2177,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "tabnine",
+    "name": "Tabnine Pro",
+    "category": "code",
+    "categoryLabel": "💻 Code & Developers",
+    "priceMonthly": 12,
+    "priceYearly": 144,
+    "description": "Tabnine Pro is a proprietary AI code completion tool charging monthly developer subscriptions for AI code generation, context-aware suggestions, and IDE chat integrations.",
+    "slug": "tabnine-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Continue",
+        "badge": "100% Open Source",
+        "type": "open-source",
+        "description": "Continue is an open-source AI code assistant for VS Code and JetBrains that connects seamlessly to local LLMs like Ollama for completely free, offline code completion and chat.",
+        "url": "https://github.com/continuedev/continue",
+        "pros": [
+          "100% open-source with strict local privacy options",
+          "Integrates with Ollama, LM Studio, or custom API endpoints",
+          "Supports inline edits, codebase indexing, and custom prompt shortcuts"
+        ],
+        "cons": [
+          "Requires local GPU hardware or API setup for optimal speed"
+        ]
+      },
+      {
+        "name": "Codeium",
+        "badge": "Free for Individuals",
+        "type": "freemium",
+        "description": "Codeium provides a generous free-forever tier for individual developers featuring lightning-fast multi-line completions, AI chat, and support for over 70+ popular IDEs.",
+        "url": "https://codeium.com",
+        "pros": [
+          "Unlimited free code completions for individual developers",
+          "Ultra-fast response latency and broad IDE support",
+          "Built-in chat assistant for code explanation and refactoring"
+        ],
+        "cons": [
+          "Closed-source proprietary model hosted on cloud infrastructure"
+        ]
+      },
+      {
+        "name": "Tabby",
+        "badge": "100% Open Source",
+        "type": "open-source",
+        "description": "Tabby is a self-hosted, open-source AI coding engine built as a private alternative to commercial code completion tools, powered by open coding models like DeepSeek-Coder.",
+        "url": "https://github.com/TabbyML/tabby",
+        "pros": [
+          "Self-hosted infrastructure ensures full code privacy",
+          "Supports modern open-weights models like StarCoder and DeepSeek-Coder",
+          "Easy one-command Docker deployment with admin dashboard"
+        ],
+        "cons": [
+          "Requires hosting infrastructure or dedicated server GPU resources"
+        ]
+      }
+    ]
   }
 ]
