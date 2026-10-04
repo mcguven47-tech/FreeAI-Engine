@@ -2234,5 +2234,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "vercel-v0",
+    "name": "Vercel v0 Pro",
+    "category": "code",
+    "categoryLabel": "💻 Code & UI Generation",
+    "priceMonthly": 20,
+    "priceYearly": 240,
+    "description": "Vercel v0 generates frontend UI components and React code from natural language prompts, but usage limits quickly force developers into a $20/month subscription.",
+    "slug": "vercel-v0-free-alternatives",
+    "alternatives": [
+      {
+        "name": "OpenUI",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "An open-source tool developed by Weights & Biases that lets you describe UI components in plain text and renders live, customizable HTML and Tailwind code using open LLMs.",
+        "url": "https://github.com/wandb/openui",
+        "pros": [
+          "Fully open source and self-hostable",
+          "Supports local LLMs via Ollama for 100% offline usage",
+          "Generates clean React, HTML, and Tailwind CSS"
+        ],
+        "cons": [
+          "Requires local setup and basic command line knowledge"
+        ]
+      },
+      {
+        "name": "Bolt.new",
+        "badge": "Freemium / Open Source",
+        "type": "freemium",
+        "description": "An AI-powered web development agent by StackBlitz that allows you to prompt, build, run, and deploy full-stack web applications entirely in your browser.",
+        "url": "https://github.com/stackblitz/bolt.new",
+        "pros": [
+          "Builds full-stack applications, not just frontend UI",
+          "Executes Node.js code natively in browser WebContainers",
+          "Open-source core architecture"
+        ],
+        "cons": [
+          "Free tier hosted version has daily token limits"
+        ]
+      },
+      {
+        "name": "Locofy.ai",
+        "badge": "Freemium",
+        "type": "freemium",
+        "description": "Converts Figma and Adobe XD designs or prompts into production-ready React, Vue, HTML, and React Native code with AI assistance.",
+        "url": "https://www.locofy.ai",
+        "pros": [
+          "Integrates directly with design tools like Figma",
+          "Generates clean, modular frontend code structure",
+          "Generous free tier for individual projects"
+        ],
+        "cons": [
+          "Works best with design files rather than purely text prompts"
+        ]
+      }
+    ]
   }
 ]
