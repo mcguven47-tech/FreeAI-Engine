@@ -2291,5 +2291,65 @@
         ]
       }
     ]
+  },
+  {
+    "id": "midjourney-niji",
+    "name": "Mootion",
+    "category": "video",
+    "categoryLabel": "🎬 Video & Animation",
+    "priceMonthly": 39,
+    "priceYearly": 380,
+    "description": "An expensive AI video and 3D character animation platform heavily used for game development and social media content, charging high monthly fees for advanced motion capture and rendering.",
+    "slug": "mootion-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Blender (with AI Add-ons)",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "The industry-standard open-source 3D creation suite that natively handles rigging, animation, and rendering without subscription costs.",
+        "url": "https://www.blender.org",
+        "pros": [
+          "Completely free and open source",
+          "Infinite community plugins and tutorials",
+          "Professional grade rigging and animation tools"
+        ],
+        "cons": [
+          "Steep learning curve",
+          "Requires manual setup for AI-assisted workflows"
+        ]
+      },
+      {
+        "name": "Rokoko Vision",
+        "badge": "Freemium",
+        "type": "freemium",
+        "description": "AI-powered markerless motion capture using just a webcam, offering free tier access to export animation data.",
+        "url": "https://www.rokoko.com/products/rokoko-vision",
+        "pros": [
+          "Browser and app-based markerless mocap",
+          "Exports directly to Blender and Unity",
+          "Generous free tier"
+        ],
+        "cons": [
+          "Requires good lighting and camera setup",
+          "Free tier includes watermarks or export limits"
+        ]
+      },
+      {
+        "name": "DeepMotion",
+        "badge": "Freemium",
+        "type": "freemium",
+        "description": "AI motion capture and 3D character animation platform that converts video to 3D animations automatically.",
+        "url": "https://www.deepmotion.com",
+        "pros": [
+          "Extremely fast video-to-3d conversion",
+          "No expensive mocap suits required",
+          "Good free starter credits"
+        ],
+        "cons": [
+          "Paid plans required for high-res commercial outputs",
+          "Credits deplete quickly with complex animations"
+        ]
+      }
+    ]
   }
 ]
