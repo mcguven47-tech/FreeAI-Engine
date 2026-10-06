@@ -2351,5 +2351,65 @@
         ]
       }
     ]
+  },
+  {
+    "id": "bland-ai",
+    "name": "Bland AI",
+    "category": "audio",
+    "categoryLabel": "🎙️ Voice & Audio",
+    "priceMonthly": 350,
+    "priceYearly": 4200,
+    "description": "Enterprise-grade conversational AI phone agent platform with expensive per-minute pricing and high platform entry fees for automated calling and phone support.",
+    "slug": "bland-ai-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Retell AI",
+        "badge": "Freemium",
+        "type": "freemium",
+        "description": "A developer-first conversational voice AI platform allowing you to build real-time voice agents with low latency and a generous free tier.",
+        "url": "https://www.retellai.com",
+        "pros": [
+          "Extremely low latency (under 500ms)",
+          "Easy developer API and webhooks",
+          "Generous free tier to start building"
+        ],
+        "cons": [
+          "Priced per minute after free limits",
+          "Requires technical setup for telephony integration"
+        ]
+      },
+      {
+        "name": "Vapi",
+        "badge": "Freemium",
+        "type": "freemium",
+        "description": "Open-source and developer-centric voice bot infrastructure that lets you orchestrate LLMs, STT, and TTS for phone calls easily.",
+        "url": "https://vapi.ai",
+        "pros": [
+          "Open-source client SDKs",
+          "Flexible BYO (Bring Your Own) model for LLM and TTS keys",
+          "Free initial call minutes"
+        ],
+        "cons": [
+          "Requires configuring third-party API keys for full power",
+          "Developer-focused with minimal no-code features"
+        ]
+      },
+      {
+        "name": "Vocode",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "An open-source Python library that makes it easy to build voice-based LLM agents for phone calls, Zoom meetings, and web browsers.",
+        "url": "https://github.com/vocodedev/vocode-python",
+        "pros": [
+          "100% open source and self-hostable",
+          "Supports Twilio, Vonage, and Plivo out of the box",
+          "No platform lock-in or subscription fees"
+        ],
+        "cons": [
+          "Requires self-hosting infrastructure and telephony accounts",
+          "Requires Python programming knowledge to configure"
+        ]
+      }
+    ]
   }
 ]
