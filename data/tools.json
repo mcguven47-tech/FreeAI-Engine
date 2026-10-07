@@ -2411,5 +2411,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "gemini-live-advanced-multimodal",
+    "name": "Replika Pro",
+    "category": "chat",
+    "categoryLabel": "💬 AI Companion & Chat",
+    "priceMonthly": 20,
+    "priceYearly": 140,
+    "description": "Replika Pro is a popular AI companion app offering advanced voice calls, AR features, and emotional support, locked behind a steep monthly subscription.",
+    "slug": "replika-pro-free-alternatives",
+    "alternatives": [
+      {
+        "name": "SillyTavern",
+        "badge": "100% Free & Open Source",
+        "type": "open-source",
+        "description": "A powerful node-based user interface for interacting with large language models, image generators, and TTS engines, giving you total control over your AI companions.",
+        "url": "https://github.com/SillyTavern/SillyTavern",
+        "pros": [
+          "100% free and open-source",
+          "Endless customization and roleplay options",
+          "Connects to free or local backends"
+        ],
+        "cons": [
+          "Requires technical setup and technical knowledge"
+        ]
+      },
+      {
+        "name": "Kindroid",
+        "badge": "Freemium",
+        "type": "freemium",
+        "description": "An advanced AI companion app featuring exceptionally realistic autonomous messaging, high memory capacity, and real-time voice calls.",
+        "url": "https://kindroid.ai/",
+        "pros": [
+          "Highly realistic conversational flow",
+          "Generous free tier with daily allowances",
+          "Built-in voice chat capabilities"
+        ],
+        "cons": [
+          "Advanced features and unlimited voice require a paid tier"
+        ]
+      },
+      {
+        "name": "Chai AI",
+        "badge": "Free to Play",
+        "type": "free",
+        "description": "A popular mobile platform for discovering, creating, and chatting with custom AI companions powered by various open and proprietary models.",
+        "url": "https://chai.ml/",
+        "pros": [
+          "Massive community of user-created bots",
+          "Very easy to use mobile app",
+          "Free messaging with ad support"
+        ],
+        "cons": [
+          "Message limits on the free tier without watching ads"
+        ]
+      }
+    ]
   }
 ]
