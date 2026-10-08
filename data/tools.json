@@ -2468,5 +2468,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "baseten-triton",
+    "name": "Baseten",
+    "category": "code",
+    "categoryLabel": "⚡ Code & Infrastructure",
+    "priceMonthly": 500,
+    "priceYearly": 6000,
+    "description": "Baseten is an enterprise infrastructure platform for deploying and scaling high-performance AI models in production, known for its heavy compute pricing and steep minimum commitments.",
+    "slug": "baseten-free-alternatives",
+    "alternatives": [
+      {
+        "name": "vLLM",
+        "badge": "Open Source",
+        "type": "open-source",
+        "description": "A high-throughput and memory-efficient LLM serving engine built with PagedAttention, allowing you to self-host and serve models with incredible speed.",
+        "url": "https://github.com/vllm-project/vllm",
+        "pros": [
+          "State-of-the-art serving speed",
+          "Low memory overhead with PagedAttention",
+          "Supports a massive catalog of open models"
+        ],
+        "cons": [
+          "Requires technical setup and cloud infrastructure"
+        ]
+      },
+      {
+        "name": "Ollama",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "Run large language models locally on your own hardware or server setup with zero configuration, perfect for development and lightweight production pipelines.",
+        "url": "https://github.com/ollama/ollama",
+        "pros": [
+          "Incredibly easy local installation",
+          "Active community and model library",
+          "API compatible with OpenAI endpoints"
+        ],
+        "cons": [
+          "Limited by your local machine hardware or single-node server capacity"
+        ]
+      },
+      {
+        "name": "Hugging Face Inference Endpoints / Spaces",
+        "badge": "Freemium",
+        "type": "freemium",
+        "description": "Deploy machine learning models easily with robust community support, free tier options for testing, and scalable cloud hosting infrastructure.",
+        "url": "https://huggingface.co",
+        "pros": [
+          "Massive repository of pre-trained models",
+          "Free tier spaces for prototyping",
+          "Seamless CI/CD integrations"
+        ],
+        "cons": [
+          "Paid tiers can scale up quickly depending on GPU requirements"
+        ]
+      }
+    ]
   }
 ]
