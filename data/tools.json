@@ -2525,5 +2525,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "wellsaid-labs",
+    "name": "WellSaid Labs",
+    "category": "audio",
+    "categoryLabel": "🎙️ Audio & Voice",
+    "priceMonthly": 49,
+    "priceYearly": 588,
+    "description": "Enterprise-grade AI text-to-speech voice generator targeted at corporate voiceovers and e-learning, priced at a steep $49/month with strict download and character limits.",
+    "slug": "wellsaid-labs-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Kokoro TTS",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "An incredibly lightweight, open-source 82M parameter text-to-speech model that delivers human-grade voice quality locally without cloud costs.",
+        "url": "https://github.com/hexgrad/kokoro",
+        "pros": [
+          "Ultra-fast local inference with tiny 82M model weight",
+          "Remarkably natural human voice quality and rhythm",
+          "Runs entirely offline with zero character limits"
+        ],
+        "cons": [
+          "Requires basic CLI knowledge or community WebUI setup"
+        ]
+      },
+      {
+        "name": "XTTS v2 (Coqui TTS)",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "A powerful open-source deep learning speech generation model capable of voice cloning from audio clips as short as 3 seconds across 17+ languages.",
+        "url": "https://github.com/coqui-ai/TTS",
+        "pros": [
+          "Instant voice cloning using 3-second sample clips",
+          "Supports 17+ languages with multi-speaker support",
+          "Deep custom model fine-tuning capability"
+        ],
+        "cons": [
+          "Requires dedicated GPU for low-latency generation"
+        ]
+      },
+      {
+        "name": "Edge-TTS",
+        "badge": "100% Free",
+        "type": "free",
+        "description": "A Python module and CLI tool that leverages Microsoft Edge's online neural text-to-speech service without requiring any API keys or paid accounts.",
+        "url": "https://github.com/rany2/edge-tts",
+        "pros": [
+          "Access to hundreds of hyper-realistic neural voices",
+          "Zero setup required and no local GPU dependency",
+          "Extremely lightweight command-line interface"
+        ],
+        "cons": [
+          "Requires an active internet connection"
+        ]
+      }
+    ]
   }
 ]
