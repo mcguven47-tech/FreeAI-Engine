@@ -2639,5 +2639,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "writesonic",
+    "name": "Writesonic",
+    "category": "writing",
+    "categoryLabel": "✍️ Writing & Marketing",
+    "priceMonthly": 20,
+    "priceYearly": 240,
+    "description": "A popular AI copywriting and SEO content generation platform that gets expensive as token usage scales.",
+    "slug": "writesonic-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Open WebUI + Ollama",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "Self-hosted full-featured interface for running open LLMs (like Llama 3, Mistral) locally with unlimited word generation.",
+        "url": "https://github.com/open-webui/open-webui",
+        "pros": [
+          "Zero word generation limits or monthly subscription fees",
+          "Complete data privacy with local execution",
+          "Built-in web search, document RAG, and custom prompts"
+        ],
+        "cons": [
+          "Requires local setup and decent computer hardware"
+        ]
+      },
+      {
+        "name": "HubSpot Campaign Assistant",
+        "badge": "100% Free",
+        "type": "free",
+        "description": "Free AI marketing copy generator built specifically for writing ad copy, landing pages, and email campaigns.",
+        "url": "https://www.hubspot.com/campaign-assistant",
+        "pros": [
+          "Completely free without hidden word quotas",
+          "Tailored specifically for high-converting marketing content",
+          "Generates full marketing campaigns across multiple formats at once"
+        ],
+        "cons": [
+          "Lacks long-form blog article workflow tools"
+        ]
+      },
+      {
+        "name": "Rytr",
+        "badge": "Free Tier Available",
+        "type": "freemium",
+        "description": "Flexible AI writing assistant with 40+ use cases, tone variations, and built-in plagiarism checking.",
+        "url": "https://rytr.me",
+        "pros": [
+          "Free monthly allowance of 10,000 characters",
+          "Includes built-in tone selector and plagiarism checker",
+          "Handy browser extension works directly in Google Docs and email"
+        ],
+        "cons": [
+          "Free character limit can be consumed quickly by long-form writers"
+        ]
+      }
+    ]
   }
 ]
