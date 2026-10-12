@@ -2696,5 +2696,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "krea-ai",
+    "name": "Krea AI",
+    "category": "image",
+    "categoryLabel": "🎨 Image & Art",
+    "priceMonthly": 30,
+    "priceYearly": 288,
+    "description": "Krea AI popularized real-time generative canvas drawing, AI upscaling, and video morphing, but charges steep monthly subscriptions ($30/mo for Pro, $60/mo for Max) while rationing fast compute credits.",
+    "slug": "krea-ai-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Krita AI Diffusion",
+        "badge": "100% Free & Open Source",
+        "type": "open-source",
+        "description": "Brings real-time interactive diffusion directly into Krita, providing zero-latency generative sketching, inpainting, and upscaling on a production-grade digital painting suite.",
+        "url": "https://github.com/Acly/krita-ai-diffusion",
+        "pros": [
+          "Real-time interactive canvas drawing powered by local StreamDiffusion and LCMs",
+          "Runs entirely offline on local hardware with zero subscription fees or data harvesting",
+          "Deep integration with Krita's industry-standard layers, brushes, and selection tools"
+        ],
+        "cons": [
+          "Requires a dedicated modern GPU (6GB+ VRAM recommended) for real-time responsiveness"
+        ]
+      },
+      {
+        "name": "InvokeAI",
+        "badge": "100% Free & Open Source",
+        "type": "open-source",
+        "description": "A powerhouse local creative studio featuring an infinite Unified Canvas designed for high-precision inpainting, outpainting, model blending, and professional creative control.",
+        "url": "https://github.com/invoke-ai/InvokeAI",
+        "pros": [
+          "Intuitive Unified Canvas with native non-destructive layer editing",
+          "Built-in model manager supporting SDXL, SD 1.5, and cutting-edge ControlNet adapters",
+          "Cross-platform support with one-click installers for Windows, macOS, and Linux"
+        ],
+        "cons": [
+          "Demands several gigabytes of local storage for model weights and cache files"
+        ]
+      },
+      {
+        "name": "ComfyUI",
+        "badge": "100% Free & Open Source",
+        "type": "open-source",
+        "description": "The gold-standard modular node-based diffusion engine capable of reproducing Krea's real-time generation, ultra-high-resolution upscaling, and video pipelines with total flexibility.",
+        "url": "https://github.com/comfyanonymous/ComfyUI",
+        "pros": [
+          "Unbeatable performance and memory optimization with TensorRT and FP8 support",
+          "Massive community ecosystem offering node workflows for every proprietary feature",
+          "Zero compute caps, queues, or vendor lock-in"
+        ],
+        "cons": [
+          "Steep node-based learning curve compared to simplified single-click SaaS apps"
+        ]
+      }
+    ]
   }
 ]
