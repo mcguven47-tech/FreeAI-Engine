@@ -2753,5 +2753,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "gamma-app",
+    "name": "Gamma App",
+    "category": "writing",
+    "categoryLabel": "📊 Presentations & Content",
+    "priceMonthly": 16,
+    "priceYearly": 192,
+    "description": "Gamma App is a popular AI presentation and document builder, but strict monthly credit caps and team features require expensive recurring subscriptions.",
+    "slug": "gamma-app-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Slidev",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "An open-source presentation framework designed for developers that transforms Markdown into beautiful interactive slide decks with zero cost.",
+        "url": "https://github.com/slidevjs/slidev",
+        "pros": [
+          "Complete creative control using Markdown and Vue.js components",
+          "Zero cost with no credit limits or watermark restrictions",
+          "Built-in presenter mode, interactive components, and export tools"
+        ],
+        "cons": [
+          "Requires basic familiarity with Markdown and command line tools"
+        ]
+      },
+      {
+        "name": "Marp",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "An ecosystem that turns plain Markdown text into styled slide decks instantly with VS Code integration.",
+        "url": "https://github.com/marp-team/marp",
+        "pros": [
+          "Seamless VS Code integration with instant live preview",
+          "Export directly to PDF, HTML, or PowerPoint files",
+          "100% free and open-source with custom CSS theme support"
+        ],
+        "cons": [
+          "Requires pairing with a local or free LLM to auto-generate content"
+        ]
+      },
+      {
+        "name": "MindShow",
+        "badge": "Freemium",
+        "type": "freemium",
+        "description": "An AI-assisted presentation generator that transforms structured outlines and prompt texts into styled slide decks within seconds.",
+        "url": "https://www.mindshow.fun",
+        "pros": [
+          "Instant AI conversion from simple text outlines to styled slides",
+          "Generous free tier suitable for casual presentation creators",
+          "No technical setup required"
+        ],
+        "cons": [
+          "Advanced high-resolution exports are locked behind paid tiers"
+        ]
+      }
+    ]
   }
 ]
