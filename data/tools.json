@@ -2810,5 +2810,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "civitai",
+    "name": "Civitai Generator & Commercial Tier",
+    "category": "image",
+    "categoryLabel": "🎨 Image & Art",
+    "priceMonthly": 15,
+    "priceYearly": 144,
+    "description": "Civitai's creator tiers and on-site generation queue provide priority access to high-end Stable Diffusion checkpoints, LoRAs, and cloud GPU rendering, which can get costly for heavy users.",
+    "slug": "civitai-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Automatic1111 Stable Diffusion WebUI",
+        "badge": "100% Free & Open Source",
+        "type": "open-source",
+        "description": "The gold standard local interface for generating images using Stable Diffusion models, completely free when run on your own hardware.",
+        "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+        "pros": [
+          "Infinite free generations",
+          "Complete control over models and extensions",
+          "Active open-source community"
+        ],
+        "cons": [
+          "Requires a dedicated GPU with sufficient VRAM"
+        ]
+      },
+      {
+        "name": "ComfyUI",
+        "badge": "100% Free & Open Source",
+        "type": "open-source",
+        "description": "A node-based graphical user interface for Stable Diffusion, enabling extremely complex generation pipelines and workflows without cloud subscription costs.",
+        "url": "https://github.com/comfyanonymous/ComfyUI",
+        "pros": [
+          "Highly optimized and memory efficient",
+          "Unmatched workflow flexibility",
+          "Powerful node ecosystem"
+        ],
+        "cons": [
+          "Steeper learning curve for beginners"
+        ]
+      },
+      {
+        "name": "Fooocus",
+        "badge": "100% Free & Open Source",
+        "type": "open-source",
+        "description": "An offline, open-source image generation software that combines the best features of Midjourney and Stable Diffusion with a focus on simplicity.",
+        "url": "https://github.com/lllyasviel/Fooocus",
+        "pros": [
+          "Extremely easy to use (Midjourney-like simplicity)",
+          "Out-of-the-box high quality prompts and styles",
+          "Completely free and local"
+        ],
+        "cons": [
+          "Less granular control than Automatic1111 or ComfyUI"
+        ]
+      }
+    ]
   }
 ]
