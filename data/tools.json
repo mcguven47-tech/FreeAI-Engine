@@ -2867,5 +2867,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "voiceflow-pro",
+    "name": "Voiceflow Pro",
+    "category": "chat",
+    "categoryLabel": "💬 AI Chat & Agent Builder",
+    "priceMonthly": 50,
+    "priceYearly": 600,
+    "description": "A collaborative platform for designing, prototyping, and deploying AI conversational agents that gates essential team features and charges steep rates for credit overages.",
+    "slug": "voiceflow-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Dify.ai",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "An open-source LLM application development platform combining visual workflow orchestration, comprehensive RAG pipelines, and multi-agent coordination.",
+        "url": "https://github.com/langgenius/dify",
+        "pros": [
+          "Self-hostable with full feature parity via Docker",
+          "Built-in RAG engine with advanced document preprocessing",
+          "Supports dozens of LLM providers and local models"
+        ],
+        "cons": [
+          "Requires hosting infrastructure and basic DevOps maintenance"
+        ]
+      },
+      {
+        "name": "Flowise AI",
+        "badge": "100% Free / Open Source",
+        "type": "open-source",
+        "description": "A visual drag-and-drop user interface to construct customized LLM workflows, conversational bots, and autonomous agents.",
+        "url": "https://github.com/FlowiseAI/Flowise",
+        "pros": [
+          "Completely free with no credit limits or lock-in",
+          "Extensive integration with LangChain and LlamaIndex components",
+          "Can be launched instantly via a single npx command"
+        ],
+        "cons": [
+          "Canvas can become visually complex with deeply nested logic"
+        ]
+      },
+      {
+        "name": "Langflow",
+        "badge": "Open Source / Freemium",
+        "type": "open-source",
+        "description": "A Python-first visual framework for building multi-agent AI systems, offering instant API exports and custom component scripting.",
+        "url": "https://github.com/langflow-ai/langflow",
+        "pros": [
+          "Enables custom Python code injection directly in visual nodes",
+          "Instant generation of ready-to-use API endpoints",
+          "Active community with extensive pre-built agent templates"
+        ],
+        "cons": [
+          "Slightly steeper learning curve for non-developers"
+        ]
+      }
+    ]
   }
 ]
