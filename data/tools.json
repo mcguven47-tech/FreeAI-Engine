@@ -2924,5 +2924,62 @@
         ]
       }
     ]
+  },
+  {
+    "id": "anthropic-console-api",
+    "name": "Anthropic Console (Claude API Tier 4/5)",
+    "category": "chat",
+    "categoryLabel": "💬 LLMs & Chatbots",
+    "priceMonthly": 100,
+    "priceYearly": 1200,
+    "description": "High-volume enterprise and developer API access to Claude 3.5 Sonnet and Opus models, which becomes extremely expensive when processing massive context windows and continuous multi-agent prompts.",
+    "slug": "anthropic-console-api-free-alternatives",
+    "alternatives": [
+      {
+        "name": "Ollama",
+        "badge": "100% Free & Open Source",
+        "type": "open-source",
+        "description": "Run open-source large language models like Llama 3, Mistral, and Gemma locally on your own hardware with complete privacy and zero API costs.",
+        "url": "https://ollama.com",
+        "pros": [
+          "100% free with unlimited local execution",
+          "Complete data privacy and offline capability",
+          "Extensive ecosystem of supported models"
+        ],
+        "cons": [
+          "Requires powerful local hardware (GPU with VRAM)"
+        ]
+      },
+      {
+        "name": "Groq Console",
+        "badge": "Generous Free Tier",
+        "type": "freemium",
+        "description": "Blazing fast inference API utilizing LPU (Language Processing Unit) technology, offering a robust free tier for state-of-the-art open models like Llama 3 and Mixtral.",
+        "url": "https://groq.com",
+        "pros": [
+          "Incredible inference speeds (hundreds of tokens per second)",
+          "Generous free API rate limits",
+          "Zero setup hardware requirements"
+        ],
+        "cons": [
+          "Limited to open-weight models hosted on their platform"
+        ]
+      },
+      {
+        "name": "OpenRouter",
+        "badge": "Pay-As-You-Go / Free Models",
+        "type": "freemium",
+        "description": "A unified router for LLM APIs that provides access to dozens of completely free open-source models alongside ultra-cheap commercial options.",
+        "url": "https://openrouter.ai",
+        "pros": [
+          "Access to a dedicated list of permanently free models",
+          "Standardized API compatible with OpenAI/Anthropic SDKs",
+          "Easy switching between providers without code changes"
+        ],
+        "cons": [
+          "Free tier models may experience high traffic congestion"
+        ]
+      }
+    ]
   }
 ]
